@@ -246,3 +246,55 @@ footer a {
         grid-template-columns: 1fr; 
     }
 }
+
+/* ========================================= */
+/* CSS KHUSUS HALAMAN DETAIL PROYEK */
+/* ========================================= */
+
+.detail-page-layout {
+    max-width: 900px; /* Batasi lebar agar konten tidak terlalu panjang */
+    margin: 40px auto;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.project-title-detail {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.project-summary {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.detail-section h3 {
+    color: var(--secondary-color); /* Warna Mint yang Anda gunakan */
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: left; /* Biar teksnya tidak di tengah */
+}
+
+.detail-section p, .detail-section ul {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0 auto;
+}
+
+/* Pastikan gambar di detail proyek responsif */
+.detail-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
