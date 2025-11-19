@@ -1,0 +1,248 @@
+/* PALET WARNA (Ganti kode HEX-nya sesuai selera Anda!) */
+:root {
+    --primary-color: #FF6B6B; /* Merah Muda / Merah Cerah */
+    --secondary-color: #4ECDC4; /* Hijau Mint */
+    --accent-color: #FFD700; /* Kuning Cerah */
+    --text-dark: #333;
+    --text-light: #fefefe;
+    --bg-light: #f9f9f9;
+}
+
+/* RESET & FONT DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Font untuk teks umum */
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light); 
+    min-height: 100vh; 
+    position: relative; 
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Fredoka One', cursive; /* Font playful untuk judul */
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+}
+
+/* DEKORASI BACKGROUND */
+.background-decorations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    overflow: hidden;
+    z-index: 1; /* Di belakang konten */
+}
+/* Anda perlu menyiapkan file bubble1.png dan leaf.png di folder images! */
+.decor-bubble, .decor-leaf {
+    position: absolute;
+    opacity: 0.6;
+    animation: float 10s infinite ease-in-out; 
+    z-index: 2;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* HEADER & NAVIGASI */
+header {
+    background: var(--secondary-color);
+    color: var(--text-light);
+    padding: 1em 5%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 10;
+    position: relative;
+}
+
+header h1 {
+    color: var(--text-light);
+    font-size: 1.8em;
+}
+
+header nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--accent-color);
+}
+
+/* HERO SECTION */
+#hero {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 6em 5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden; 
+    border-bottom-left-radius: 50px; 
+    border-bottom-right-radius: 50px;
+    margin-bottom: 2em;
+    z-index: 5;
+    
+    /* GINGHAM PATTERN (Asumsi Anda punya file red-gingham.png) */
+    background-image: url('images/red-gingham.png'); 
+    background-size: 200px auto; 
+    background-repeat: repeat-x; 
+    background-position: bottom center; 
+    background-color: var(--primary-color); 
+}
+
+/* Title Besar (Port 2025 Folio) */
+.main-title {
+    font-size: 4em;
+    color: var(--secondary-color);
+    line-height: 0.8; 
+    margin-bottom: 0.5em;
+    position: relative;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}
+.main-title span {
+    display: block;
+}
+.main-title .year {
+    font-size: 0.4em; 
+    color: var(--accent-color); 
+}
+
+#hero h2 {
+    color: var(--text-light);
+    font-size: 2.5em;
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 12px 25px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 30px; 
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px); 
+}
+
+/* SECTION UMUM */
+section {
+    padding: 3em 5%;
+    margin: 2em auto;
+    max-width: 1100px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    z-index: 5;
+    position: relative;
+}
+
+section h3 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+}
+
+/* PROJECT GRID */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--bg-light);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card img {
+    max-width: 100%;
+    height: 180px; 
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* SKILLS TAGS */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skill-tag {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    background: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5em;
+    font-size: 1em;
+    margin-top: 3em;
+    z-index: 10;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* MEDIA QUERIES (RESPONSIF) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    header nav {
+        margin-top: 10px;
+    }
+    header nav a {
+        margin: 0 10px;
+    }
+    #hero {
+        padding: 4em 3%;
+    }
+    .main-title { font-size: 3em; }
+    #hero h2 { font-size: 1.8em; }
+    .project-grid {
+        grid-template-columns: 1fr; 
+    }
+}
