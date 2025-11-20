@@ -179,7 +179,6 @@ a {
 }
 
 /* --- ABOUT ME LAYOUT --- */
-
 /* Style untuk judul di luar Grid */
 .about-header-text {
     max-width: 1200px;
@@ -201,7 +200,6 @@ a {
     max-width: 300px; 
     height: auto;
     border-radius: 8px;
-    /* KOREKSI: Gunakan contain agar foto dengan background transparan tidak terpotong */
     object-fit: contain; 
     border: 4px solid var(--accent-light);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -242,6 +240,12 @@ a {
     text-decoration: none;
     color: var(--text-dark);
     height: 100%; 
+}
+
+.project-card-large:hover {
+    box-shadow: 0 8px 25px rgba(76, 0, 255, 0.2);
+    transform: translateY(-5px);
+    border-color: var(--interactive-start);
 }
 
 /* LOGO ICON/GAMBAR */
