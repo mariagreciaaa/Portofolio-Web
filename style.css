@@ -407,3 +407,86 @@ a {
         grid-template-columns: 1fr;
     }
 }
+
+/* ========================================= */
+/* CSS KHUSUS PROJECTS.HTML (Perbaikan) */
+/* ========================================= */
+
+.project-list-grid {
+    display: grid;
+    /* Pastikan ada 3 kolom di desktop */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.project-card-large {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid var(--accent-light);
+    display: block; 
+    text-decoration: none;
+    color: var(--text-dark);
+    height: 100%; /* Penting: Agar semua kartu tingginya sama */
+}
+
+.project-card-large:hover {
+    box-shadow: 0 8px 25px rgba(76, 0, 255, 0.2);
+    transform: translateY(-5px);
+    border-color: var(--interactive-start);
+}
+
+.project-icon {
+    font-size: 2.2em;
+    color: var(--interactive-start);
+    margin-bottom: 15px;
+    display: block;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+}
+
+.project-card-large h3 {
+    font-size: 1.3em;
+    color: var(--accent-dark);
+    margin-bottom: 10px;
+}
+
+.project-card-large p {
+    font-size: 0.95em;
+    color: var(--accent-medium);
+    margin-bottom: 20px;
+}
+
+.view-details {
+    font-weight: 700;
+    color: var(--interactive-start);
+    display: inline-block;
+    border-bottom: 2px solid var(--interactive-start);
+    padding-bottom: 2px;
+}
+
+/* STYLE BARU: KOTAK UNTUK KEMBALI KE DASHBOARD */
+.back-to-hub-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-dark);
+    color: var(--color-white);
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-to-hub-button:hover {
+    background-color: var(--interactive-end);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .project-list-grid {
+        grid-template-columns: 1fr;
+    }
+}
