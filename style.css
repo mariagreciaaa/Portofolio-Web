@@ -1,8 +1,7 @@
 /* ========================================= */
-/* PALET WARNA (Dashboard Classy) */
+/* PALET WARNA (Dashboard Classy & Ungu) */
 /* ========================================= */
 :root {
-    /* Backgrounds & Text (Berdasarkan Palet Hex Anda) */
     --primary-bg: #FFFFFF;    
     --secondary-bg: #eaebfe; /* Biru/Abu Sangat Terang (Dashboard Samping) */
     --text-dark: #212529;     
@@ -13,7 +12,7 @@
     --accent-medium: #505a74; 
     --accent-dark: #022954;   
     
-    /* Warna Interaktif/Gradient (Inspirasi Dashboard Ungu) */
+    /* Warna Interaktif/Gradient (Ungu) */
     --interactive-start: #7B66FF; 
     --interactive-end: #4C00FF;   
     
@@ -24,6 +23,8 @@
 /* ========================================= */
 /* BASE STYLES & TYPOGRAPHY */
 /* ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -57,8 +58,9 @@ a:hover {
 
 /* SECTION UTAMA */
 section {
-    padding: 60px 40px;
-    min-height: 80vh;
+    padding: 60px 5%;
+    min-height: auto; 
+    border-bottom: 1px solid var(--accent-light);
 }
 
 .bg-secondary {
@@ -86,18 +88,20 @@ section {
 }
 
 .sidebar {
-    width: 280px; /* Lebar sidebar */
+    width: 280px; 
     background-color: var(--secondary-bg); 
     padding: 30px 20px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
-    position: sticky; /* Sidebar tetap saat konten digulir */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05); 
+    position: sticky; 
     top: 0;
-    height: 100vh; /* Agar sidebar mengisi penuh tinggi */
-    overflow-y: auto; /* Memungkinkan gulir jika menu terlalu banyak */
+    height: 100vh;
+    overflow-y: auto; 
+    z-index: 10; 
 }
 
 .main-content {
     flex-grow: 1; 
+    padding: 0; 
 }
 
 /* ========================================= */
@@ -132,7 +136,12 @@ section {
     color: var(--text-dark);
     font-size: 1.1em;
 }
+.role {
+    font-size: 0.9em;
+    color: var(--accent-medium);
+}
 
+/* Menu Navigasi Sidebar */
 .menu-title {
     font-weight: 700;
     color: var(--accent-medium);
@@ -188,10 +197,6 @@ section {
     color: var(--accent-medium);
     margin-bottom: 30px;
 }
-.hero-actions .secondary-link {
-    margin-left: 20px;
-    color: var(--accent-medium);
-}
 
 /* ========================================= */
 /* STATS SECTION (DASHBOARD) */
@@ -202,18 +207,19 @@ section {
 }
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
     margin-top: 30px;
 }
 
 .stat-card {
     background-color: var(--primary-bg);
-    padding: 25px;
+    padding: 20px;
     border: 1px solid var(--accent-light);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
     transition: all 0.3s ease;
+    text-align: left;
 }
 
 .stat-card:hover {
@@ -225,7 +231,7 @@ section {
 .stat-value {
     font-size: 2.5em;
     font-weight: bold;
-    color: var(--interactive-start); /* Warna Ungu Aksen */
+    color: var(--interactive-start); 
     margin-bottom: 5px;
 }
 
@@ -249,12 +255,14 @@ section {
 /* PROJECTS & GENERAL CONTENT */
 /* ========================================= */
 .about-content-grid {
-    column-count: 2;
-    column-gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
     font-size: 1.05em;
+    margin-top: 30px;
 }
 
-.project-grid, .experience-grid, .design-grid {
+.project-grid, .experience-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
@@ -291,6 +299,7 @@ section {
 .timeline-container {
     border-left: 3px solid var(--accent-light);
     padding-left: 20px;
+    max-width: 800px;
 }
 .timeline-item {
     margin-bottom: 30px;
@@ -310,6 +319,9 @@ section {
 }
 
 /* Design Section */
+.design-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
 .design-image {
     width: 100%;
     height: 350px;
@@ -346,33 +358,52 @@ section {
 /* ========================================= */
 @media (max-width: 992px) {
     .dashboard-container {
-        flex-direction: column;
+        flex-direction: column; 
     }
     .sidebar {
         width: 100%;
         height: auto;
-        position: relative;
+        position: relative; 
         padding-bottom: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .profile-info {
+        display: none; 
+    }
+    
+    /* Mengubah menu sidebar menjadi bar horizontal di mobile */
+    .main-menu ul, .library-menu ul, .contact-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding-bottom: 5px;
+    }
+    .menu-title {
+        display: none; 
+    }
+    
+    .main-menu li a, .library-menu li a, .contact-menu li a {
+        padding: 5px 10px;
+        transform: none;
+        margin-right: 10px;
+    }
+    
+    /* Layout konten utama di mobile */
+    .about-content-grid {
+        grid-template-columns: 1fr;
     }
     .main-content {
         padding-left: 0;
     }
-    .main-menu ul, .library-menu ul, .contact-menu ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .main-menu li a, .library-menu li a, .contact-menu li a {
-        padding: 5px 15px;
-        transform: none;
-    }
-    .main-menu li a:hover, .library-menu li a:hover, .contact-menu li a:hover {
-        transform: none;
-    }
     section {
         padding: 40px 5%;
     }
-    .about-content-grid {
-        column-count: 1;
+    .section-title {
+        font-size: 1.8em;
+    }
+    .contact-info-grid {
+        flex-direction: column;
+        gap: 20px;
     }
 }
