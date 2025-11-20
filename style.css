@@ -12,8 +12,8 @@
     --accent-medium: #434a5c; 
     --accent-dark: #022954;   
     
-    --interactive-start: #BCCCDC; /* Ungu Muda */
-    --interactive-end: #505153;   /* Ungu Gelap */
+    --interactive-start: #7B66FF; /* KOREKSI: Menggunakan Ungu/Violet untuk interaktif */
+    --interactive-end: #4C00FF;   /* KOREKSI: Ungu Gelap */
     
     --font-serif: 'Lora', serif;
     --font-sans: 'Open Sans', sans-serif;
@@ -61,8 +61,8 @@ a {
     min-height: 100vh;
     padding: 50px 5%;
     
-    /* BACKGROUND GAMBAR DENGAN NAMA FILE DARI USER */
-    background-image: url('images/background\ general.jpg'); 
+    /* KOREKSI PATH GAMBAR */
+    background-image: url('images/background general.jpg'); 
     background-size: cover; 
     background-position: center;
     background-attachment: fixed;
@@ -125,8 +125,8 @@ a {
 }
 
 .nav-card:hover {
-    box-shadow: 0 10px 30px rgba(114, 114, 114, 0.3); /* Bayangan lebih kuat saat hover */
-    transform: translateY(-8px); /* Efek pop-out lebih terasa */
+    box-shadow: 0 10px 30px rgba(76, 0, 255, 0.3); /* Menggunakan warna ungu untuk bayangan */
+    transform: translateY(-8px); 
     border-top-color: var(--interactive-start); 
 }
 
@@ -135,14 +135,12 @@ a {
     font-size: 2.5em;
     color: var(--interactive-start); 
     margin-bottom: 15px;
-    /* Memberikan bayangan untuk efek 3D */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
     transition: all 0.2s ease; 
 }
 
 .nav-card:hover .nav-icon {
     color: var(--interactive-end); 
-    /* Efek bergerak dan bayangan lebih kuat saat hover */
     transform: translate(-3px, -3px) scale(1.05); 
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
 }
@@ -242,7 +240,7 @@ a {
 }
 .section-subtitle-large {
     font-size: 1.1em;
-    color: var(--interactive-start);
+    color: var(--accent-dark); /* KOREKSI: Menggunakan warna gelap agar terlihat */
     font-family: var(--font-sans);
 }
 
