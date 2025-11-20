@@ -222,9 +222,10 @@ a {
 /* ABOUT ME LAYOUT */
 .about-me-layout {
     display: grid;
-    grid-template-columns: 300px 1fr; /* Kolom 1 untuk foto, Kolom 2 untuk teks */
+    grid-template-columns: 300px 1fr; 
     gap: 40px;
-    align-items: start;
+    /* KOREKSI 1: Agar semua konten vertikal di tengah */
+    align-items: center; /* Mengatur item grid di tengah secara vertikal */
 }
 
 .profile-photo-large {
@@ -246,10 +247,17 @@ a {
     font-family: var(--font-sans);
 }
 
+.bio-text {
+    /* Tambahkan pengaturan ini untuk merapikan teks biografi */
+    padding-top: 20px;
+}
+
 .bio-text h3 {
+    /* KOREKSI 2: Pastikan judul tidak memiliki margin berlebihan di atas */
+    margin-top: 0; 
+    
     color: var(--accent-dark);
     font-size: 1.5em;
-    margin-top: 0;
     margin-bottom: 15px;
     border-bottom: 2px solid var(--accent-light);
     padding-bottom: 5px;
