@@ -9,11 +9,11 @@
 
     --text-dark: #212529;     
     --accent-light: #b0b8ce;  
-    --accent-medium: #505a74; 
+    --accent-medium: #434a5c; 
     --accent-dark: #022954;   
     
     --interactive-start: #BCCCDC; /* Ungu Muda */
-    --interactive-end: #9AA6B2;   /* Ungu Gelap */
+    --interactive-end: #505153;   /* Ungu Gelap */
     
     --font-serif: 'Lora', serif;
     --font-sans: 'Open Sans', sans-serif;
@@ -62,7 +62,7 @@ a {
     padding: 50px 5%;
     
     /* BACKGROUND GAMBAR DENGAN NAMA FILE DARI USER */
-    background-image: url('background\ general.jpg'); 
+    background-image: url('images/background\ general.jpg'); 
     background-size: cover; 
     background-position: center;
     background-attachment: fixed;
