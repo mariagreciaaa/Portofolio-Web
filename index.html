@@ -3,175 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARIA GRECIA HUTABARAT | Creative Marketing Portfolio</title>
+    <title>MARIA GRECIA HUTABARAT | Creative Marketing Dashboard</title>
     
     <link rel="stylesheet" href="style.css">
     
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     
-    <header id="main-header">
-        <nav class="container">
-            <a href="#hero" class="logo">MGH</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experiences">Experiences</a></li>
-                <li><a href="#design">Design</a></li>
-                <li><a href="#contact" class="cta-button">Contact Me</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="hero">
-        <div class="hero-content">
-            <img src="images/foto-profil-anda.jpg" alt="Maria Grecia Hutabarat" class="profile-pic"> 
-            <h1 class="hero-title">MARIA GRECIA HUTABARAT</h1>
-            <h2 class="hero-subtitle">
-                Content Creation | Social Media Management | Data-Driven Marketing
-            </h2>
-            <p class="hero-tagline">
-                Mengubah ide kreatif menjadi hasil terukur. Selamat datang di Dashboard Portofolio saya.
-            </p>
-            <div class="hero-actions">
-                <a href="#stats" class="cta-button">Lihat Metrik Kinerja →</a>
-                <a href="https://linkedin.com/in/greciahutabaratt" target="_blank" class="secondary-link">LinkedIn</a>
-            </div>
-        </div>
-    </section>
-    
-    <section id="stats" class="bg-secondary">
-        <h2 class="section-title">Key Performance Metrics</h2>
-        <p class="section-subtitle">Ringkasan performa terukur dari proyek & kontribusi utama.</p>
+    <div class="dashboard-container">
         
-        <div class="stats-grid">
-            
-            <div class="stat-card">
-                <div class="stat-value">2.6M+</div>
-                <div class="stat-label">Total Views Media Digital</div>
-                <div class="stat-source">(MNP Fest Reels, TikTok)</div>
+        <div class="sidebar">
+            <div class="profile-info">
+                <img src="images/foto-profil-anda.jpg" alt="Profile" class="sidebar-photo"> 
+                <p class="greeting">Hi, I'm</p>
+                <p class="name">MARIA GRECIA</p>
+                <p class="role">Mahasiswa Digital Commerce</p>
             </div>
 
-            <div class="stat-card">
-                <div class="stat-value">+1,010</div>
-                <div class="stat-label">Pengikut Organik</div>
-                <div class="stat-source">(MNP Fest 2024 - 0 Followers)</div>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-value">8%</div>
-                <div class="stat-label">Rata-Rata Engagement Rate</div>
-                <div class="stat-source">(Diatas Rata-rata Industri)</div>
-            </div>
+            <nav class="main-menu">
+                <p class="menu-title">Menu Utama</p>
+                <ul>
+                    <li><a href="#stats"><i class="fas fa-chart-line"></i> Metrik Kinerja</a></li>
+                    <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
+                </ul>
+            </nav>
             
-            <div class="stat-card">
-                <div class="stat-value">1,000+</div>
-                <div class="stat-label">Peserta/Pengunjung Offline Event</div>
-                <div class="stat-source">(MNP FEST, ECLIVAL 2024)</div>
-            </div>
+            <nav class="library-menu">
+                <p class="menu-title">Portfolio & Project</p>
+                <ul>
+                    <li><a href="#projects"><i class="fas fa-briefcase"></i> Studi Proyek</a></li>
+                    <li><a href="#organization"><i class="fas fa-building"></i> Organisasi</a></li>
+                    <li><a href="#experiences"><i class="fas fa-bullhorn"></i> Experiences & MC</a></li>
+                    <li><a href="#design"><i class="fas fa-palette"></i> Design Visual</a></li>
+                </ul>
+            </nav>
             
-        </div>
-    </section>
-
-    <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Mahasiswa semester 5 Program Studi Digital Commerce and Supply Chain di Multimedia Nusantara Polytechnic dengan ketertarikan besar pada dunia digital marketing, komunikasi, dan konten digital.</p>
-                <p>Melalui berbagai proyek kampus, pengalaman publikasi di media digital, dan kegiatan organisasi, saya berpengalaman dalam membuat dan mengelola konten lintas platform (Instagram, TikTok, Medium), serta menganalisis performa publikasi menggunakan data insights.</p>
-                <p>Saya percaya bahwa marketing bukan hanya tentang menjual produk, tetapi tentang memahami audiens, membangun koneksi, dan menyampaikan cerita yang autentik. Nilai-nilai seperti kolaborasi, inisiatif, dan ketulusan menjadi dasar saya dalam setiap kampanye dan proyek yang saya jalani.</p>
-            </div>
-            </div>
-    </section>
-
-    <section id="projects" class="bg-secondary">
-        <h2 class="section-title">Study & Creative Projects</h2>
-        <p class="section-subtitle">Studi kasus mendalam yang menunjukkan proses kerja kreatif dan analitis.</p>
-        
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>MNP FESTIVAL 2024</h3>
-                <p>Digital Marketing & Content Production. Membangun kehadiran media sosial dari 0 hingga 1.000+ followers organik.</p>
-                <a href="torto.html" class="cta-button project-button">Lihat Detail Kasus →</a>
-            </div>
-            
-            <div class="project-card">
-                <h3>BUSINESS PLAN COMPETITION</h3>
-                <p>Merancang konsep bisnis yang kreatif dan solutif di tingkat perguruan tinggi dan nasional (Juara 3 & TOP 10 Finalist BPC UNDIP).</p>
-                <a href="#" class="cta-button project-button">Lihat Dokumen Bisnis →</a>
-            </div>
-            
-            <div class="project-card">
-                <h3>APLIKASI E-COMMERCE UI/UX</h3>
-                <p>Mendesain UX/UI untuk aplikasi belanja dengan Figma, berfokus pada alur *checkout* yang intuitif.</p>
-                <a href="#" class="cta-button project-button">Akses Figma/Studi Kasus →</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="organization">
-        <h2 class="section-title">Organization & Achievements</h2>
-        <p class="section-subtitle">Kontribusi dan pengakuan di luar kurikulum.</p>
-        
-        <div class="timeline-container">
-            <div class="timeline-item">
-                <h3 class="timeline-title">Penerima Beasiswa Akademik 100%</h3>
-                <span class="timeline-date">2023 - Sekarang</span>
-                <p>Mendapatkan beasiswa penuh atas prestasi akademik yang konsisten di Program Studi Digital Commerce & Supply Chain.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3 class="timeline-title">TOP 10 Finalist - Business Plan Competition</h3>
-                <span class="timeline-date">Universitas Diponegoro, 2024</span>
-                <p>Berhasil masuk 10 besar finalis dari puluhan tim peserta nasional.</p>
-            </div>
-            
-            <div class="timeline-item">
-                <h3 class="timeline-title">Jabatan Organisasi/Organisasi Anda</h3>
-                <span class="timeline-date">Tahun - Tahun</span>
-                <p>Tanggung jawab dalam organisasi, e.g., Koordinator Divisi Media, BEM MNP.</p>
-            </div>
-            
-            <div class="timeline-item">
-                <h3 class="timeline-title">MC/Panitia Inti ECLIVAL 2024</h3>
-                <span class="timeline-date">Tahun Pelaksanaan</span>
-                <p>Berperan sebagai Master of Ceremony dan mendampingi peserta dari awal hingga acara selesai.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="design" class="bg-secondary">
-        <h2 class="section-title">Visual & Design Portfolio</h2>
-        <p class="section-subtitle">Infografis, Social Media Feeds, dan UI yang dirancang.</p>
-        
-        <div class="design-grid">
-            <img src="images/design-infografis.jpg" alt="Infografis Pemasaran" class="design-image">
-            <img src="images/design-feed.jpg" alt="Social Media Feed Layout" class="design-image">
-            <img src="images/design-ui.jpg" alt="Tampilan UI E-Commerce" class="design-image">
-        </div>
-        <div style="text-align: center; margin-top: 40px;">
-             <a href="#" class="cta-button">Lihat Seluruh Galeri Design →</a>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2 class="section-title">Let's Connect!</h2>
-        <p class="section-subtitle" style="max-width: 600px; margin: 0 auto 30px;">
-            Tertarik untuk berkolaborasi atau ingin mengetahui studi kasus lebih lanjut? Silakan hubungi saya.
-        </p>
-        
-        <div class="contact-info">
-            <p><strong>Email:</strong> <a href="mailto:mgreciahutabarat@gmail.com" class="secondary-link">mgreciahutabarat@gmail.com</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/greciahutabaratt" target="_blank" class="secondary-link">greciahutabaratt</a></p>
+            <nav class="contact-menu">
+                <p class="menu-title">Contact</p>
+                <ul>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Hubungi Saya</a></li>
+                </ul>
+            </nav>
         </div>
         
-        </section>
-    
-    <footer style="text-align: center; padding: 20px 0; background-color: var(--text-dark); color: var(--text-light); font-size: 0.9em;">
-        &copy; 2025 Maria Grecia Hutabarat. Built with HTML, CSS, & GitHub Pages.
-    </footer>
-    
-    </body>
+        <div class="main-content">
+            
+            <section id="hero" class="hero-section">
+                <h1 class="hero-title">Creative Marketing Dashboard 2025</h1>
+                <h2 class="hero-subtitle">
+                    Content Creation | Social Media Management | [cite_start]Data-Driven Marketing [cite: 3]
+                </h2>
+                <p class="hero-tagline">
+                    Mengubah ide kreatif menjadi hasil terukur. Portofolio ini merangkum kemampuan analitis dan strategi konten saya.
+                </p>
+            </section>
+            
+            <section id="stats" class="stats-section">
+                <h2 class="section-title">Key Performance Metrics</h2>
+                <p class="section-subtitle">Ringkasan performa terukur dari proyek & kontribusi utama.</p>
+                
+                <div class="stats-grid">
+                    
+                    <div class="stat-card">
+                        <div class="stat-value">2.6M+</div>
+                        [cite_start]<div class="stat-label">Total Tayangan Postingan [cite: 114]</div>
+                        [cite_start]<div class="stat-source">Naik 38.274% (MNP Fest Reels) [cite: 69]</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-value">8,373</div>
+                        [cite_start]<div class="stat-label">Tampilan Profil [cite: 77]</div>
+                        [cite_start]<div class="stat-source">Peningkatan 5.068% [cite: 70]</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-value">41K+</div>
+                        [cite_start]<div class="stat-label">Suka / Likes [cite: 78]</div>
+                        [cite_start]<div class="stat-source">Meningkat 47.340% [cite: 71]</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-value">1,010+</div>
+                        <div class="stat-label">Pengikut Organik</div>
+                        [cite_start]<div class="stat-source">Dari 0 Followers (MNP Fest 2024) [cite: 154]</div>
+                    </div>
+                    
+                </div>
+                
+                <div class="full-report-link">
+                    <a href="#projects" class="secondary-link">Lihat studi kasus MNP Festival secara detail →</a>
+                </div>
+            </section>
+
+            <section id="about" class="about-section">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Nilai, keahlian, dan semangat yang saya bawa.</p>
+                <div class="about-content-grid">
+                    [cite_start]<p>Mahasiswa semester 5 Program Studi Digital Commerce and Supply Chain di Multimedia Nusantara Polytechnic dengan ketertarikan besar pada dunia digital marketing, komunikasi, dan konten digital[cite: 13].</p>
+                    [cite_start]<p>Melalui berbagai proyek kampus, pengalaman publikasi di media digital, dan kegiatan organisasi, saya berpengalaman dalam membuat dan mengelola konten lintas platform (Instagram, TikTok, Medium), serta menganalisis performa publikasi menggunakan data insights[cite: 14].</p>
+                    <p>Saya percaya bahwa marketing bukan hanya tentang menjual produk, tetapi tentang memahami audiens, membangun koneksi, dan menyampaikan cerita yang autentik. [cite_start]Nilai-nilai seperti kolaborasi, inisiatif, dan ketulusan menjadi dasar saya dalam setiap kampanye dan proyek yang saya jalani[cite: 15, 16].</p>
+                </div>
+            </section>
+
+            <section id="projects" class="projects-section bg-secondary">
+                <h2 class="section-title">Study & Creative Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>MNP FESTIVAL 2024</h3>
+                        [cite_start]<p>Studi kasus Digital Marketing & Content Production, berfokus pada strategi pertumbuhan organik & engagement rate di Instagram dan TikTok[cite: 47, 51].</p>
+                        <a href="torto.html" class="project-button">Lihat Detail Kasus (2.6M Views) →</a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>LOMBA IDE BISNIS & BPC</h3>
+                        <p>Merancang konsep bisnis digital yang kreatif. [cite_start]Pencapaian: Juara 3 Lomba Ide Bisnis & TOP 10 Finalist BPC UNDIP[cite: 409, 413].</p>
+                        <a href="#" class="project-button">Lihat Pencapaian →</a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>PENULISAN ARTIKEL KOMPASIANA</h3>
+                        [cite_start]<p>Publikasi 5 artikel di 4 platform, mencapai 400+ *page visits* per artikel dan masuk Top 10 hasil pencarian Google[cite: 182, 183].</p>
+                        <a href="#" class="project-button">Baca Publikasi →</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="organization" class="timeline-section">
+                <h2 class="section-title">Organization & Achievements</h2>
+                
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <h3 class="timeline-title">Badan Eksekutif Mahasiswa (BEM)</h3>
+                        [cite_start]<p>Organisasi mahasiswa tingkat institusi, menjadi wadah aspirasi dan penggerak kegiatan kemahasiswaan[cite: 355, 357].</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="timeline-title">ECLIVAL 2025</h3>
+                        [cite_start]<p>Ajang kolaboratif yang mencakup kompetisi, workshop, dan bazar untuk mempromosikan dunia e-commerce serta logistik[cite: 352, 354].</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="timeline-title">Penerima Beasiswa Akademik 100%</h3>
+                        [cite_start]<p>Mendapatkan beasiswa penuh atas prestasi akademik yang konsisten di Program Studi Digital Commerce & Supply Chain[cite: 404, 407].</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="experiences" class="experience-section bg-secondary">
+                <h2 class="section-title">Master of Ceremony & Public Speaking</h2>
+                <div class="experience-grid">
+                    <div class="experience-item">
+                        <p class="role-title">MC - Dish Dash E-commerce</p>
+                        <span class="role-date">Sep 2025</span>
+                        [cite_start]<p>Mengasah kemampuan *public speaking*, improvisasi, dan membangun *engagement* dengan audiens di acara Himpunan Mahasiswa[cite: 370, 372].</p>
+                    </div>
+                    <div class="experience-item">
+                        <p class="role-title">MC - Business Plan Competition ECLIVAL 2025</p>
+                        <span class="role-date">Sep 2025</span>
+                        [cite_start]<p>Memandu jalannya kompetisi BPC skala nasional, menjaga alur kompetisi profesional dan interaktif[cite: 373, 375].</p>
+                    </div>
+                    <div class="experience-item">
+                        <p class="role-title">Pemateri Prodi - Campus Visit MNP</p>
+                        <span class="role-date">Feb 2024</span>
+                        [cite_start]<p>Memberikan presentasi interaktif kepada siswa SMA, menyampaikan materi secara persuasif dan *engaging*[cite: 390, 392].</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="design" class="design-section">
+                <h2 class="section-title">Visual & Design Portfolio</h2>
+                [cite_start]<p class="section-subtitle">Infografis, Social Media Feeds, dan UI yang dirancang (Menggunakan Canva, CapCut, Figma)[cite: 185, 186, 187].</p>
+                
+                <div class="design-grid">
+                    <img src="images/design-momoyo-infografis.jpg" alt="Infografis Momoyo" class="design-image">
+                    <img src="images/design-feeds-ig.jpg" alt="Social Media Feed Layout" class="design-image">
+                    <img src="images/design-ui-traveling.jpg" alt="UI Traveling Made Easy" class="design-image">
+                </div>
+            </section>
+            
+            <section id="contact" class="contact-section bg-secondary">
+                <h2 class="section-title">Get in Touch!</h2>
+                <div class="contact-info-grid">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope fa-2x" style="color: var(--accent-medium);"></i>
+                        <p><strong>Email Address</strong></p>
+                        [cite_start]<a href="mailto:mgreciahutabarat@gmail.com" target="_blank" class="secondary-link">mgreciahutabarat@gmail.com [cite: 9]</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin fa-2x" style="color: var(--accent-medium);"></i>
+                        <p><strong>LinkedIn Profile</strong></p>
+                        [cite_start]<a href="https://linkedin.com/in/greciahutabaratt" target="_blank" class="secondary-link">linkedin.com/in/greciahutabaratt [cite: 11]</a>
+                    </div>
+                </div>
+            </section>
+            
+            <footer class="main-footer">
+                &copy; 2025 MARIA GRECIA HUTABARAT. Built with ❤️, HTML, CSS, & GitHub Pages.
+            </footer>
+        </div>
+        
+    </div>
+</body>
 </html>
