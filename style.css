@@ -391,6 +391,8 @@ a {
     font-size: 0.95em;
     color: var(--accent-medium);
     margin-bottom: 20px;
+    /* Memberikan ruang yang fleksibel */
+    flex-grow: 1; 
 }
 
 .view-details {
@@ -399,6 +401,7 @@ a {
     display: inline-block;
     border-bottom: 2px solid var(--interactive-start);
     padding-bottom: 2px;
+    margin-top: auto;
 }
 
 /* MOBILE RESPONSIVENESS */
@@ -441,10 +444,18 @@ a {
 }
 
 .project-icon {
-    font-size: 2.2em;
+    font-size: 3em; /* Perbesar ukuran ikon */
     color: var(--interactive-start);
-    margin-bottom: 15px;
-    display: block;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px; /* Lebar lingkaran */
+    height: 65px; /* Tinggi lingkaran */
+    border-radius: 50%; /* Membuat lingkaran */
+    /* Background halus agar ikon menonjol */
+    background-color: rgba(123, 102, 255, 0.1); 
+    /* Efek 3D ringan pada ikon */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
 }
 
@@ -452,12 +463,24 @@ a {
     font-size: 1.3em;
     color: var(--accent-dark);
     margin-bottom: 10px;
+    /* PENTING: Reset margin-top h3 jika ada */
+    margin-top: 0;
 }
 
-.project-card-large p {
-    font-size: 0.95em;
-    color: var(--accent-medium);
-    margin-bottom: 20px;
+.project-card-large {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid var(--accent-light);
+    display: flex; /* Menggunakan Flexbox untuk memposisikan item */
+    flex-direction: column; /* Mengatur item dari atas ke bawah */
+    align-items: center; /* PENTING: Membuat konten rata tengah horizontal */
+    text-align: center; /* PENTING: Membuat teks di tengah */
+    text-decoration: none;
+    color: var(--text-dark);
+    height: 100%; 
 }
 
 .view-details {
