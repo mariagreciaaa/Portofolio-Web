@@ -341,3 +341,69 @@ a {
         padding: 30px;
     }
 }
+
+/* ========================================= */
+/* CSS KHUSUS HALAMAN PROJECTS.HTML */
+/* ========================================= */
+
+.project-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.project-card-large {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid var(--accent-light);
+    display: block; /* Agar seluruh kartu dapat diklik */
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+.project-card-large:hover {
+    box-shadow: 0 8px 25px rgba(76, 0, 255, 0.2);
+    transform: translateY(-5px);
+    border-color: var(--interactive-start);
+}
+
+.project-card-large h3 {
+    font-size: 1.3em;
+    color: var(--accent-dark);
+    margin-bottom: 10px;
+}
+
+.project-icon {
+    font-size: 2.2em;
+    color: var(--interactive-start);
+    margin-bottom: 15px;
+    display: block;
+    /* Efek 3D ringan pada ikon */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+}
+
+.project-card-large p {
+    font-size: 0.95em;
+    color: var(--accent-medium);
+    margin-bottom: 20px;
+}
+
+.view-details {
+    font-weight: 700;
+    color: var(--interactive-start);
+    display: inline-block;
+    border-bottom: 2px solid var(--interactive-start);
+    padding-bottom: 2px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .project-list-grid {
+        grid-template-columns: 1fr;
+    }
+}
