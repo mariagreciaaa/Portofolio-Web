@@ -73,6 +73,17 @@ a {
     margin-bottom: 50px;
 }
 
+/* KOREKSI: BATAS UKURAN FOTO PROFIL DASHBOARD */
+.hub-header img {
+    width: 250px; 
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%; 
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    border: 5px solid var(--color-white);
+}
+
 .hub-title {
     font-size: 2.8em;
     margin-bottom: 5px;
@@ -118,12 +129,7 @@ a {
     transition: all 0.2s ease; 
 }
 
-.nav-card:hover .nav-icon {
-    color: var(--interactive-end); 
-    transform: translate(-3px, -3px) scale(1.05); 
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
-}
-
+/* Footer */
 .main-footer {
     text-align: center;
     padding: 20px 0;
@@ -246,7 +252,7 @@ a {
 .project-logo {
     max-width: 60%; 
     max-height: 60%;
-    object-fit: contain;
+    object-fit: contain; /* KOREKSI: Fix cropping gambar */
     transition: transform 0.3s ease;
 }
 .project-card-large:hover .project-logo {
@@ -306,7 +312,7 @@ a {
     margin-bottom: 30px;
 }
 .tool-tag {
-    background-color: var(--secondary-bg);
+    background-color: var(--primary-bg-start); /* Menggunakan warna abu terang */
     color: var(--accent-dark);
     padding: 8px 15px;
     border-radius: 20px;
@@ -342,7 +348,7 @@ a {
     margin-bottom: 30px;
 }
 .stat-card-small {
-    background-color: var(--secondary-bg);
+    background-color: var(--primary-bg-start);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -367,7 +373,7 @@ a {
 .doc-image {
     width: 100%;
     height: 250px;
-    object-fit: cover;
+    object-fit: contain; 
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
