@@ -12,8 +12,8 @@
     --accent-medium: #505a74; 
     --accent-dark: #022954;   
     
-    --interactive-start: #7B66FF; /* Ungu Muda */
-    --interactive-end: #4C00FF;   /* Ungu Gelap */
+    --interactive-start: #BCCCDC; /* Ungu Muda */
+    --interactive-end: #9AA6B2;   /* Ungu Gelap */
     
     --font-serif: 'Lora', serif;
     --font-sans: 'Open Sans', sans-serif;
@@ -62,7 +62,7 @@ a {
     padding: 50px 5%;
     
     /* BACKGROUND GAMBAR DENGAN NAMA FILE DARI USER */
-    background-image: url('images/background general.jpg'); 
+    background-image: url('background\ general.jpg'); 
     background-size: cover; 
     background-position: center;
     background-attachment: fixed;
@@ -125,7 +125,7 @@ a {
 }
 
 .nav-card:hover {
-    box-shadow: 0 10px 30px rgba(76, 0, 255, 0.3); /* Bayangan lebih kuat saat hover */
+    box-shadow: 0 10px 30px rgba(114, 114, 114, 0.3); /* Bayangan lebih kuat saat hover */
     transform: translateY(-8px); /* Efek pop-out lebih terasa */
     border-top-color: var(--interactive-start); 
 }
