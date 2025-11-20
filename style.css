@@ -2,8 +2,7 @@
 /* PALET WARNA (Dashboard Classy & Ungu) */
 /* ========================================= */
 :root {
-    /* Warna yang didapat dari palet dan gambar latar belakang Anda */
-    --primary-bg-start: #eaebfe; /* Warna awal gradasi/background */
+    --primary-bg-start: #eaebfe; 
     --primary-bg-end: #d0d7f7;   
     --color-white: #FFFFFF;
 
@@ -12,8 +11,8 @@
     --accent-medium: #434a5c; 
     --accent-dark: #022954;   
     
-    --interactive-start: #7B66FF; /* KOREKSI: Menggunakan Ungu/Violet untuk interaktif */
-    --interactive-end: #4C00FF;   /* KOREKSI: Ungu Gelap */
+    --interactive-start: #7B66FF; 
+    --interactive-end: #4C00FF;   
     
     --font-serif: 'Lora', serif;
     --font-sans: 'Open Sans', sans-serif;
@@ -61,13 +60,12 @@ a {
     min-height: 100vh;
     padding: 50px 5%;
     
-    /* KOREKSI PATH GAMBAR */
     background-image: url('images/background general.jpg'); 
     background-size: cover; 
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll; /* Mengatasi masalah lag saat scroll */
     background-repeat: no-repeat;
-    background-color: var(--primary-bg-start); /* Warna fallback jika gambar gagal dimuat */
+    background-color: var(--primary-bg-start);
 }
 
 .hub-header {
@@ -80,7 +78,6 @@ a {
     border-radius: 50%;
     margin-bottom: 15px;
     object-fit: cover;
-    /* Border gradient */
     border: 5px solid transparent; 
     background-image: linear-gradient(white, white), 
                       linear-gradient(to right, var(--interactive-start), var(--interactive-end));
@@ -93,13 +90,7 @@ a {
     font-size: 2.8em;
     margin-bottom: 5px;
 }
-.section-subtitle-large {
-    font-size: 1.1em;
-    /* !important memastikan warna ini dipakai, mengatasi masalah override */
-    color: var(--accent-dark) !important; 
-    font-family: var(--font-sans);
-    font-weight: 600;
-}
+
 .hub-tagline {
     font-style: italic;
     color: var(--accent-medium);
@@ -127,7 +118,7 @@ a {
 }
 
 .nav-card:hover {
-    box-shadow: 0 10px 30px rgba(76, 0, 255, 0.3); /* Menggunakan warna ungu untuk bayangan */
+    box-shadow: 0 10px 30px rgba(76, 0, 255, 0.3);
     transform: translateY(-8px); 
     border-top-color: var(--interactive-start); 
 }
@@ -147,17 +138,6 @@ a {
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
-.nav-card h3 {
-    font-size: 1.4em;
-    margin-bottom: 5px;
-    color: var(--accent-dark);
-}
-
-.nav-card p {
-    color: var(--accent-medium);
-    font-size: 0.95em;
-}
-
 /* Footer */
 .main-footer {
     text-align: center;
@@ -168,25 +148,7 @@ a {
 }
 
 /* ========================================= */
-/* MOBILE RESPONSIVENESS */
-/* ========================================= */
-@media (max-width: 768px) {
-    .hub-title {
-        font-size: 2em;
-    }
-    .hub-subtitle {
-        font-size: 1em;
-    }
-    .hub-nav-grid {
-        grid-template-columns: 1fr;
-    }
-    .main-dashboard-hub {
-        padding: 40px 5%;
-    }
-}
-
-/* ========================================= */
-/* CSS KHUSUS HALAMAN DETAIL (e.g., about.html) */
+/* CSS KHUSUS HALAMAN DETAIL (SEMUA HALAMAN .html) */
 /* ========================================= */
 
 .page-container {
@@ -196,7 +158,7 @@ a {
     background-image: url('images/background general.jpg'); 
     background-size: cover; 
     background-position: center;
-    background-attachment: scroll;
+    background-attachment: scroll; /* Mengatasi masalah lag saat scroll */
     background-color: var(--primary-bg-start);
 }
 
@@ -219,15 +181,24 @@ a {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* ABOUT ME LAYOUT */
-.about-me-layout {
-    display: grid;
-    grid-template-columns: 300px 1fr; 
-    gap: 40px;
-    /* KOREKSI 1: Agar semua konten vertikal di tengah */
-    align-items: center; /* Mengatur item grid di tengah secara vertikal */
+.section-title-large {
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+.section-subtitle-large {
+    font-size: 1.1em;
+    color: var(--accent-dark) !important; /* KOREKSI: Menggunakan warna gelap agar terlihat (Masalah about.html) */
+    font-family: var(--font-sans);
+    font-weight: 600;
 }
 
+/* --- ABOUT ME LAYOUT --- */
+.about-me-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    align-items: center; 
+}
 .profile-photo-large {
     width: 100%;
     height: auto;
@@ -236,39 +207,19 @@ a {
     border: 4px solid var(--accent-light);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-.section-title-large {
-    font-size: 2.5em;
-    margin-top: 20px;
-}
-.section-subtitle-large {
-    font-size: 1.1em;
-    color: var(--accent-dark); /* KOREKSI: Menggunakan warna gelap agar terlihat */
-    font-family: var(--font-sans);
-}
-
 .bio-text {
-    /* Tambahkan pengaturan ini untuk merapikan teks biografi */
     padding-top: 20px;
 }
-
 .bio-text h3 {
-    /* KOREKSI 2: Pastikan judul tidak memiliki margin berlebihan di atas */
     margin-top: 0; 
-    
     color: var(--accent-dark);
     font-size: 1.5em;
     margin-bottom: 15px;
     border-bottom: 2px solid var(--accent-light);
     padding-bottom: 5px;
 }
-.bio-text p {
-    margin-bottom: 20px;
-    font-size: 1.05em;
-    color: var(--text-dark);
-}
 
-/* SOCIAL HUB STYLES */
+/* --- SOCIAL HUB & GALLERY --- */
 .social-links-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -276,7 +227,7 @@ a {
     margin-top: 30px;
 }
 .social-card {
-    background-color: var(--primary-bg);
+    background-color: var(--color-white);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -294,130 +245,16 @@ a {
 .social-card:hover i {
     color: var(--interactive-start);
 }
-
-/* Gallery / Photo Styles */
-.gallery-cta {
-    text-align: center;
-    margin-top: 40px;
-}
-.gallery-note {
-    font-size: 0.8em;
-    color: #666;
-    margin-top: 10px;
-}
-
 .photo-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     margin-top: 30px;
 }
-.gallery-image {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-.gallery-image:hover {
-    transform: scale(1.05);
-    z-index: 10;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
 
-/* MOBILE RESPONSIVENESS */
-@media (max-width: 768px) {
-    .about-me-layout {
-        grid-template-columns: 1fr; /* Tumpuk di mobile */
-    }
-    .profile-photo-large {
-        max-width: 250px; /* Batasi lebar foto di mobile */
-        margin: 0 auto;
-    }
-    .photo-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk foto di mobile */
-    }
-    .content-section {
-        padding: 30px;
-    }
-}
-
-/* ========================================= */
-/* CSS KHUSUS HALAMAN PROJECTS.HTML */
-/* ========================================= */
-
+/* --- PROJECTS LAYOUT (Grid Cards) --- */
 .project-list-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-    text-align: left;
-}
-
-.project-card-large {
-    background-color: var(--color-white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    border: 1px solid var(--accent-light);
-    display: block; /* Agar seluruh kartu dapat diklik */
-    text-decoration: none;
-    color: var(--text-dark);
-}
-
-.project-card-large:hover {
-    box-shadow: 0 8px 25px rgba(76, 0, 255, 0.2);
-    transform: translateY(-5px);
-    border-color: var(--interactive-start);
-}
-
-.project-card-large h3 {
-    font-size: 1.3em;
-    color: var(--accent-dark);
-    margin-bottom: 10px;
-}
-
-.project-icon {
-    font-size: 2.2em;
-    color: var(--interactive-start);
-    margin-bottom: 15px;
-    display: block;
-    /* Efek 3D ringan pada ikon */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
-}
-
-.project-card-large p {
-    font-size: 0.95em;
-    color: var(--accent-medium);
-    margin-bottom: 20px;
-    /* Memberikan ruang yang fleksibel */
-    flex-grow: 1; 
-}
-
-.view-details {
-    font-weight: 700;
-    color: var(--interactive-start);
-    display: inline-block;
-    border-bottom: 2px solid var(--interactive-start);
-    padding-bottom: 2px;
-    margin-top: auto;
-}
-
-/* MOBILE RESPONSIVENESS */
-@media (max-width: 768px) {
-    .project-list-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ========================================= */
-/* CSS KHUSUS PROJECTS.HTML (Perbaikan) */
-/* ========================================= */
-
-.project-list-grid {
-    display: grid;
-    /* Pastikan ada 3 kolom di desktop */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px;
     margin-top: 40px;
@@ -431,10 +268,13 @@ a {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     border: 1px solid var(--accent-light);
-    display: block; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
     text-decoration: none;
     color: var(--text-dark);
-    height: 100%; /* Penting: Agar semua kartu tingginya sama */
+    height: 100%; 
 }
 
 .project-card-large:hover {
@@ -443,44 +283,40 @@ a {
     border-color: var(--interactive-start);
 }
 
+/* LOGO ICON/GAMBAR */
 .project-icon {
-    font-size: 3em; /* Perbesar ukuran ikon */
-    color: var(--interactive-start);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 65px; /* Lebar lingkaran */
-    height: 65px; /* Tinggi lingkaran */
-    border-radius: 50%; /* Membuat lingkaran */
-    /* Background halus agar ikon menonjol */
+    width: 80px; 
+    height: 80px; 
+    border-radius: 15px; 
     background-color: rgba(123, 102, 255, 0.1); 
-    /* Efek 3D ringan pada ikon */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
+}
+.project-logo {
+    max-width: 60%; 
+    max-height: 60%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+.project-card-large:hover .project-logo {
+    transform: scale(1.1);
 }
 
 .project-card-large h3 {
     font-size: 1.3em;
     color: var(--accent-dark);
     margin-bottom: 10px;
-    /* PENTING: Reset margin-top h3 jika ada */
     margin-top: 0;
 }
 
-.project-card-large {
-    background-color: var(--color-white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    border: 1px solid var(--accent-light);
-    display: flex; /* Menggunakan Flexbox untuk memposisikan item */
-    flex-direction: column; /* Mengatur item dari atas ke bawah */
-    align-items: center; /* PENTING: Membuat konten rata tengah horizontal */
-    text-align: center; /* PENTING: Membuat teks di tengah */
-    text-decoration: none;
-    color: var(--text-dark);
-    height: 100%; 
+.project-card-large p {
+    font-size: 0.95em;
+    color: var(--accent-medium);
+    margin-bottom: 20px;
+    flex-grow: 1; 
 }
 
 .view-details {
@@ -489,9 +325,10 @@ a {
     display: inline-block;
     border-bottom: 2px solid var(--interactive-start);
     padding-bottom: 2px;
+    margin-top: auto;
 }
 
-/* STYLE BARU: KOTAK UNTUK KEMBALI KE DASHBOARD */
+/* STYLE KOTAK UNTUK KEMBALI KE DASHBOARD */
 .back-to-hub-button {
     display: inline-block;
     padding: 10px 20px;
@@ -508,8 +345,30 @@ a {
     transform: scale(1.05);
 }
 
+/* ========================================= */
+/* MOBILE RESPONSIVENESS */
+/* ========================================= */
 @media (max-width: 768px) {
+    .hub-title {
+        font-size: 2em;
+    }
+    .hub-nav-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-me-layout {
+        grid-template-columns: 1fr; 
+    }
+    .profile-photo-large {
+        max-width: 250px; 
+        margin: 0 auto;
+    }
     .project-list-grid {
         grid-template-columns: 1fr;
+    }
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .content-section {
+        padding: 30px;
     }
 }
