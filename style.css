@@ -2,14 +2,17 @@
 /* PALET WARNA (Dashboard Classy & Ungu) */
 /* ========================================= */
 :root {
-    --primary-bg: #FFFFFF;    
-    --secondary-bg: #eaebfe; /* Abu Sangat Terang */
+    /* Warna latar belakang utama yang lebih terang untuk gradasi */
+    --primary-bg-start: #eaebfe; /* Biru/Abu Sangat Terang (start gradient) */
+    --primary-bg-end: #d0d7f7;   /* Warna sedikit lebih gelap (end gradient) */
+
     --text-dark: #212529;     
     --accent-light: #b0b8ce;  
     --accent-medium: #505a74; 
     --accent-dark: #022954;   
-    --interactive-start: #7B66FF; 
-    --interactive-end: #4C00FF;   
+    
+    --interactive-start: #7B66FF; /* Ungu Muda */
+    --interactive-end: #4C00FF;   /* Ungu Gelap */
     
     --font-serif: 'Lora', serif;
     --font-sans: 'Open Sans', sans-serif;
@@ -30,7 +33,8 @@ body {
     font-family: var(--font-sans);
     line-height: 1.6;
     color: var(--text-dark);
-    background-color: var(--primary-bg);
+    /* Background default, nanti ditimpa oleh .main-dashboard-hub */
+    background-color: var(--primary-bg-start); 
     min-height: 100vh;
 }
 
@@ -57,7 +61,8 @@ a {
     justify-content: center;
     min-height: 100vh;
     padding: 50px 5%;
-    background-color: var(--secondary-bg); /* Latar belakang elegan */
+    /* BACKGROUND GRADIENT BARU */
+    background: linear-gradient(135deg, var(--primary-bg-start) 0%, var(--primary-bg-end) 100%);
 }
 
 .hub-header {
@@ -70,7 +75,6 @@ a {
     border-radius: 50%;
     margin-bottom: 15px;
     object-fit: cover;
-    /* Border gradient untuk kesan elegan */
     border: 5px solid transparent; 
     background-image: linear-gradient(white, white), 
                       linear-gradient(to right, var(--interactive-start), var(--interactive-end));
@@ -108,21 +112,32 @@ a {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
-    border-top: 5px solid var(--accent-light); /* Garis elegan */
+    border-top: 5px solid var(--accent-light);
     text-align: left;
-    display: block; /* Agar seluruh kartu bisa diklik */
+    display: block;
 }
 
 .nav-card:hover {
     box-shadow: 0 8px 25px rgba(76, 0, 255, 0.2);
     transform: translateY(-5px); 
-    border-top-color: var(--interactive-start); /* Warna interaktif saat hover */
+    border-top-color: var(--interactive-start); 
 }
 
+/* EFEK 3D PADA IKON NAVIGASI */
 .nav-icon {
     font-size: 2.5em;
-    color: var(--interactive-start);
+    color: var(--interactive-start); /* Warna dasar ikon */
     margin-bottom: 15px;
+    /* Memberikan sedikit bayangan untuk efek 3D */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+    transition: all 0.2s ease; /* Transisi untuk animasi hover */
+}
+
+.nav-card:hover .nav-icon {
+    color: var(--interactive-end); /* Warna ikon saat hover */
+    /* Memberikan efek "pop-out" atau "mengambang" */
+    transform: translate(-2px, -2px) scale(1.05); 
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan lebih kuat */
 }
 
 .nav-card h3 {
