@@ -73,17 +73,6 @@ a {
     margin-bottom: 50px;
 }
 
-/* FOTO PROFIL DI INDEX */
-.hub-header img {
-    width: 250px; 
-    height: 250px;
-    object-fit: cover;
-    border-radius: 50%; 
-    margin-bottom: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
-    border: 5px solid var(--color-white);
-}
-
 /* Grid Kartu Navigasi */
 .hub-nav-grid {
     display: grid;
@@ -154,15 +143,6 @@ a {
     font-weight: 600;
 }
 
-/* --- ABOUT ME LAYOUT --- */
-.intro-section {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
-    margin-bottom: 40px;
-}
-
 /* FOTO PROFIL DI HALAMAN ABOUT */
 .profile-photo-about-main {
     width: 200px; 
@@ -175,93 +155,60 @@ a {
     display: block; 
 }
 
-.bio-text {
-    padding-top: 0;
-    max-width: 800px; 
-    margin: 0 auto; 
-}
-.bio-text h3 {
-    margin-top: 0; 
-    color: var(--accent-dark);
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    border-bottom: 2px solid var(--accent-light);
-    padding-bottom: 5px;
-    display: inline-block;
+/* --- PROJECTS LAYOUT (Grid Cards) --- */
+.project-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin-top: 40px;
+    text-align: left;
 }
 
-/* KOREKSI FINAL SOCIAL HUB GRID */
-.social-links-grid {
-    /* MENGATUR KE 3 KOLOM MUTLAK PADA UKURAN DESKTOP */
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 20px;
-    margin-top: 30px;
-    margin-bottom: 30px; 
-    max-width: 800px; /* Batasi lebar untuk tampilan rapi di tengah */
-    margin-left: auto;
-    margin-right: auto;
-}
-.social-card {
+.project-card-large {
     background-color: var(--color-white);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid var(--accent-light);
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    text-decoration: none;
+    color: var(--text-dark);
+    height: 100%; 
+}
+
+/* LOGO ICON/GAMBAR (FINAL FIX) */
+.project-icon {
+    margin-bottom: 25px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    border: 1px solid var(--accent-light); 
-    /* Pastikan tinggi minimal, agar semua kotak terlihat sama */
-    min-height: 150px; 
+    align-items: center;
+    width: 100px; /* Lebar container diperkuat */
+    height: 100px; /* Tinggi container diperkuat */
+    border-radius: 15px; 
+    background-color: rgba(123, 102, 255, 0.1); 
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; /* Penting: Memastikan gambar yang melebihi batas terpotong */
 }
-.social-card i {
-    color: var(--interactive-start); 
-    transition: color 0.3s ease;
-    margin-bottom: 5px; 
-}
-.social-card h3 {
-    text-align: center;
-    font-size: 1.2em;
-}
-.social-card p {
-    text-align: center;
-    font-size: 0.9em;
-    margin-bottom: 0;
+.project-logo {
+    max-width: 90% !important; /* KUATKAN: Maksa logo hanya 90% dari container */
+    max-height: 90% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain; /* Memastikan gambar full terlihat di dalam container 100x100 */
+    transition: transform 0.3s ease;
 }
 
-/* --- GALLERY VISUALS --- */
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ubah minmax agar lebih fleksibel */
-    gap: 15px;
-    margin-top: 0; 
-    margin-bottom: 50px; 
-}
-.gallery-image {
-    width: 100%;
-    height: auto; 
-    object-fit: cover; 
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    aspect-ratio: 4 / 2;
-}
-
-
-/* ========================================= */
 /* MOBILE RESPONSIVENESS */
-/* ========================================= */
 @media (max-width: 768px) {
     .content-section {
         padding: 20px;
     }
-    /* KOREKSI MOBILE: PAKSA SOSIAL CARD MENJADI 1 KOLOM */
-    .social-links-grid {
-        grid-template-columns: 1fr; 
-        max-width: 100%;
-    }
-    .photo-grid {
+    .project-list-grid {
         grid-template-columns: 1fr;
     }
 }
+/* ... (sisa kode lainnya) ... */
