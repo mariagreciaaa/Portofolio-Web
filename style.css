@@ -136,8 +136,7 @@ a {
 
 .content-section {
     max-width: 1200px;
-    /* KOREKSI: Hapus margin atas/bawah agar elemen tidak terdorong */
-    margin: 40px auto 0 auto; 
+    margin: 40px auto; 
     padding: 60px;
     background-color: var(--color-white);
     border-radius: 12px;
@@ -175,10 +174,10 @@ a {
     width: 200px; 
     height: 200px;
     object-fit: cover;
-    border-radius: 50%; 
+    border-radius: 50%; /* BULAT */
     margin: 20px auto 30px auto; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border: 3px solid var(--accent-light);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    border: 5px solid var(--accent-light);
     display: block; 
 }
 
@@ -198,7 +197,7 @@ a {
     display: inline-block;
 }
 .bio-text p {
-    text-align: left; /* KOREKSI: Teks biografi lebih profesional jika rata kiri/justified */
+    text-align: left; 
     margin-bottom: 1em;
 }
 
@@ -208,19 +207,7 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     margin-top: 30px;
-    margin-bottom: 30px; /* KOREKSI: Tambah margin bawah agar tidak menempel */
-}
-.social-card {
-    background-color: var(--color-white);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--accent-light); 
+    margin-bottom: 30px; 
 }
 
 /* KOREKSI: SPASI GALERI VISUALS */
@@ -238,7 +225,7 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 15px;
     margin-top: 0; 
-    margin-bottom: 50px; /* KOREKSI: Tambah jarak dari foto ke tombol/footer */
+    margin-bottom: 50px; 
 }
 .gallery-image {
     width: 100%;
@@ -259,4 +246,14 @@ a {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ... (Sisa kode projects, back-to-hub-button, dan mobile responsiveness) ... */
+/* ========================================= */
+/* MOBILE RESPONSIVENESS */
+/* ========================================= */
+@media (max-width: 768px) {
+    .content-section {
+        padding: 20px;
+    }
+    .social-links-grid, .photo-grid, .doc-grid {
+        grid-template-columns: 1fr;
+    }
+}
