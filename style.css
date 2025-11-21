@@ -345,19 +345,30 @@ a {
     border-top: 2px solid var(--accent-light); 
 }
 
+/* KOREKSI: TOOLS GRID (Horizontal List) */
 .tools-grid {
-    display: block !important;
+    display: flex !important; /* Wajib: Menggunakan Flexbox untuk baris horizontal */
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 30px;
+    /* KOREKSI: Tambahkan padding agar tags tidak menempel ke tepi */
+    padding-left: 0; 
 }
-
-    .tool-tag {
-        margin-bottom: 10px; /* Jarak antar tag di mobile */
-        display: block !important;
-        text-align: center;
-    }
-
+.tool-tag {
+    /* Wajib: Mengatur tag sebagai inline-block untuk menjaga baris */
+    display: inline-block; 
+    background-color: var(--primary-bg-start); 
+    color: var(--accent-dark);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    border: 1px solid var(--accent-light);
+}
+.tool-tag i {
+    color: var(--interactive-start);
+    margin-right: 5px;
+}
 
 .key-results {
     list-style: none; 
