@@ -73,7 +73,7 @@ a {
     margin-bottom: 50px;
 }
 
-/* FOTO PROFIL DI INDEX (FIXED AND BULAT) */
+/* FOTO PROFIL DI INDEX */
 .hub-header img.hub-profile-pic { 
     width: 200px !important; 
     height: 200px !important;
@@ -156,7 +156,6 @@ a {
 }
 
 /* --- ABOUT ME LAYOUT --- */
-/* Wrapper untuk teks judul dan foto profil */
 .intro-section {
     display: flex; 
     flex-direction: column; 
@@ -165,42 +164,27 @@ a {
     margin-bottom: 40px;
 }
 
-/* FOTO PROFIL KHUSUS DI HALAMAN ABOUT (FIXED AND BULAT) */
+/* FOTO PROFIL DI HALAMAN ABOUT */
 .profile-photo-about-main {
     width: 200px !important; 
     height: 200px !important;
-    object-fit: cover !important; /* Gunakan cover untuk mengisi area 200x200 */
-    border-radius: 50% !important; /* BULAT */
+    object-fit: cover !important;
+    border-radius: 50% !important; 
     margin: 20px auto 30px auto !important; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border: 3px solid var(--accent-light);
     display: block !important; 
 }
-
 .bio-text {
     padding-top: 0;
     max-width: 800px; 
     margin: 0 auto; 
-    text-align: center; 
-}
-.bio-text h3 {
-    margin-top: 0; 
-    color: var(--accent-dark);
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    border-bottom: 2px solid var(--accent-light);
-    padding-bottom: 5px;
-    display: inline-block;
-}
-.bio-text p {
-    text-align: left; 
-    margin-bottom: 1em;
 }
 
-/* --- SOCIAL HUB STYLES --- */
+/* KOREKSI FINAL SOCIAL HUB GRID & HOVER */
 .social-links-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; /* Memaksa 3 kolom */
     gap: 20px;
     margin-top: 30px;
     margin-bottom: 30px; 
@@ -230,50 +214,27 @@ a {
     color: var(--interactive-start) !important; 
 }
 
-/* --- GALLERY VISUALS --- */
+/* KOREKSI FINAL GALERI FOTO */
+.gallery-cta {
+    text-align: center;
+    margin-top: 40px; 
+    margin-bottom: 20px; 
+}
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 15px;
+    margin-top: 0; 
+    margin-bottom: 50px; 
+}
 .gallery-image {
     width: 100%;
     height: auto; 
     object-fit: cover; 
     border-radius: 8px;
     transition: transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    aspect-ratio: 4 / 2; 
-}
-
-/* --- PROJECTS LAYOUT (Grid Cards) --- */
-.project-list-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 30px;
-    margin-top: 40px;
-    text-align: left;
-}
-
-.project-card-large {
-    background-color: var(--color-white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    border: 1px solid var(--accent-light);
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
-    text-decoration: none;
-    color: var(--text-dark);
-    height: 100%; 
-}
-
-/* LOGO ICON/GAMBAR (Proyek Card) */
-.project-logo {
-    max-width: 90% !important; 
-    max-height: 90% !important;
-    width: auto !important; 
-    height: auto !important;
-    object-fit: contain !important; 
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek timbul */
+    aspect-ratio: 4 / 2;
 }
 
 /* --- DETAIL PROJECT LAYOUT (torto.html) --- */
@@ -282,13 +243,6 @@ a {
     text-align: center; 
     margin-bottom: 40px;
 }
-.detail-intro p {
-    text-align: center; 
-    max-width: 700px;
-    margin: 0 auto;
-    margin-bottom: 20px; 
-}
-
 /* FIX: LOGO DETAIL (Torto) */
 .project-logo-detail {
     max-width: 150px !important; 
@@ -300,71 +254,12 @@ a {
     border-radius: 8px;
 }
 
-.detail-section {
-    margin-top: 40px; 
-    padding-top: 40px; 
-    margin-bottom: 40px; 
-    border-top: 2px solid var(--accent-light); 
-}
-
-/* KOREKSI: TOOLS GRID (Horizontal List) */
-.tools-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-.tool-tag {
-    background-color: var(--primary-bg-start); 
-    color: var(--accent-dark);
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.9em;
-    font-weight: 600;
-    border: 1px solid var(--accent-light);
-}
-
-/* KOREKSI: KEY RESULTS (Hanya Checklist) */
-.key-results {
-    list-style: none; 
-    padding-left: 0;
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-.key-results li {
-    padding: 8px 0; 
-    font-size: 1.05em;
-    border-bottom: 1px dotted var(--accent-light); 
-}
-
-/* KOREKSI: DOCUMENTATION VISUALS */
-.doc-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-.doc-image {
-    width: 100%;
-    height: 250px;
-    object-fit: contain; 
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-}
-
-
-/* ========================================= */
 /* MOBILE RESPONSIVENESS */
-/* ========================================= */
 @media (max-width: 768px) {
     .content-section {
         padding: 20px;
     }
     .social-links-grid {
-        grid-template-columns: 1fr;
-    }
-    .doc-grid {
         grid-template-columns: 1fr;
     }
 }
