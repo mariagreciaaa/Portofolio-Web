@@ -171,16 +171,16 @@ a {
     max-width: none; 
 }
 
-/* FOTO PROFIL DI HALAMAN ABOUT */
-.profile-photo-large {
-    width: 200px; 
-    height: 200px;
-    object-fit: contain; /* Menggunakan contain agar gambar Kripton tidak terpotong */
-    border-radius: 8px; /* Mengganti dari 50% ke 8px karena foto Kripton tidak bulat */
+/* FOTO PROFIL DI HALAMAN ABOUT (FINAL FIX) */
+.profile-photo-about-final {
+    width: 250px; /* Batasi lebar */
+    height: auto; /* Tinggi menyesuaikan proporsi */
     margin: 20px auto 30px auto; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
     border: 3px solid var(--accent-light);
     display: block; 
+    border-radius: 8px; /* Kembalikan ke kotak segi empat */
+    object-fit: contain; /* Penting untuk gambar Kripton agar tidak terpotong */
 }
 .profile-summary {
     display: block; 
@@ -188,6 +188,14 @@ a {
 
 .bio-text {
     padding-top: 0;
+}
+.bio-text h3 {
+    margin-top: 0; 
+    color: var(--accent-dark);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--accent-light);
+    padding-bottom: 5px;
 }
 
 /* --- SOCIAL HUB STYLES --- */
@@ -215,6 +223,40 @@ a {
     aspect-ratio: 4 / 2; /* Rasio aspek untuk gambar galeri */
 }
 
+/* --- PROJECTS LAYOUT (Grid Cards) --- */
+.project-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+/* LOGO ICON/GAMBAR */
+.project-icon {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px; 
+    height: 80px; 
+    border-radius: 15px; 
+    background-color: rgba(123, 102, 255, 0.1); 
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+/* STYLE KOTAK UNTUK KEMBALI KE DASHBOARD */
+.back-to-hub-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-dark);
+    color: var(--color-white);
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
 /* --- DETAIL PROJECT LAYOUT (torto.html) --- */
 .doc-image {
     width: 100%;
@@ -223,7 +265,6 @@ a {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 
 /* ========================================= */
 /* MOBILE RESPONSIVENESS */
