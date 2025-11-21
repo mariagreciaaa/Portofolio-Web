@@ -74,15 +74,15 @@ a {
 }
 
 /* FOTO PROFIL DI INDEX (Final Fix: Bulat & di Tengah) */
-.hub-header img.hub-profile-pic { /* Target class spesifik untuk dashboard */
+.hub-header img.hub-profile-pic { 
     width: 200px !important; 
     height: 200px !important;
     object-fit: cover !important; 
-    border-radius: 50% !important; /* Membuatnya bulat */
-    margin: 0 auto 30px auto !important; /* Di tengah dan ada jarak */
+    border-radius: 50% !important;
+    margin: 0 auto 30px auto !important; 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
     border: 5px solid var(--color-white); 
-    display: block !important; /* Memastikan img sebagai block element untuk margin auto */
+    display: block !important; 
 }
 
 /* Grid Kartu Navigasi */
@@ -156,30 +156,20 @@ a {
 }
 
 /* --- ABOUT ME LAYOUT --- */
-.intro-section {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
-    margin-bottom: 40px;
+.profile-photo-about-main {
+    width: 200px; 
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; 
+    margin: 20px auto 30px auto; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--accent-light);
+    display: block; 
 }
 .bio-text {
     padding-top: 0;
     max-width: 800px; 
     margin: 0 auto; 
-}
-.bio-text h3 {
-    margin-top: 0; 
-    color: var(--accent-dark);
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    border-bottom: 2px solid var(--accent-light);
-    padding-bottom: 5px;
-    display: inline-block;
-}
-.bio-text p {
-    text-align: left; 
-    margin-bottom: 1em;
 }
 
 /* --- PROJECTS LAYOUT (Grid Cards) --- */
@@ -208,18 +198,6 @@ a {
 }
 
 /* LOGO ICON/GAMBAR (Proyek Card) */
-.project-icon {
-    margin-bottom: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px; 
-    height: 100px; 
-    border-radius: 15px; 
-    background-color: rgba(123, 102, 255, 0.1); 
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
-    overflow: hidden; 
-}
 .project-logo {
     max-width: 90% !important; 
     max-height: 90% !important;
@@ -273,6 +251,13 @@ a {
     border-top: 2px solid var(--accent-light); 
 }
 
+.detail-section h3 {
+    color: var(--accent-dark);
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: none; 
+}
+
 /* KOREKSI: TOOLS GRID (Horizontal List) */
 .tools-grid {
     display: flex;
@@ -280,7 +265,21 @@ a {
     gap: 10px;
     margin-bottom: 30px;
 }
+.tool-tag {
+    background-color: var(--primary-bg-start); 
+    color: var(--accent-dark);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    border: 1px solid var(--accent-light);
+}
+.tool-tag i {
+    color: var(--interactive-start);
+    margin-right: 5px;
+}
 
+/* KOREKSI: KEY RESULTS (Hanya Checklist) */
 .key-results {
     list-style: none; 
     padding-left: 0;
