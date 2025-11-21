@@ -236,9 +236,10 @@ a {
     margin-bottom: 40px;
 }
 .detail-intro p {
-    text-align: center; /* Memusatkan deskripsi di bawah logo */
+    text-align: center; 
     max-width: 700px;
     margin: 0 auto;
+    margin-bottom: 20px; /* KOREKSI: Tambah jarak di bawah deskripsi */
 }
 
 /* FIX: LOGO DETAIL (Torto) */
@@ -254,12 +255,13 @@ a {
 
 
 .detail-section {
-    margin-top: 40px;
+    margin-top: 40px; /* KOREKSI: Jarak antar section yang jelas */
     padding-top: 40px; 
     margin-bottom: 40px; 
     border-top: 2px solid var(--accent-light); 
 }
 
+/* KOREKSI: TOOLS GRID (Horizontal List) */
 .tools-grid {
     display: flex;
     flex-wrap: wrap;
@@ -278,7 +280,13 @@ a {
     font-size: 1.05em;
     border-bottom: 1px dotted var(--accent-light); 
 }
+.key-results li i {
+    color: var(--interactive-end);
+    margin-right: 10px;
+}
 
+
+/* KOREKSI: DOCUMENTATION VISUALS */
 .doc-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -289,9 +297,9 @@ a {
 .doc-image {
     width: 100%;
     height: 250px;
-    object-fit: contain; 
+    object-fit: contain; /* FIX: Gambar full terlihat tanpa cropping */
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 
