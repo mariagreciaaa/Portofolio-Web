@@ -88,11 +88,6 @@ a {
     font-size: 2.8em;
     margin-bottom: 5px;
 }
-.hub-tagline {
-    font-style: italic;
-    color: var(--accent-medium);
-    margin-top: 15px;
-}
 
 /* Grid Kartu Navigasi */
 .hub-nav-grid {
@@ -114,21 +109,7 @@ a {
     display: block; 
 }
 
-.nav-card:hover {
-    box-shadow: 0 10px 30px rgba(76, 0, 255, 0.3);
-    transform: translateY(-8px); 
-    border-top-color: var(--interactive-start); 
-}
-
-/* EFEK 3D PADA IKON NAVIGASI */
-.nav-icon {
-    font-size: 2.5em;
-    color: var(--interactive-start); 
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
-    transition: all 0.2s ease; 
-}
-
+/* Footer */
 .main-footer {
     text-align: center;
     padding: 20px 0;
@@ -186,23 +167,19 @@ a {
     padding: 0 60px; 
 }
 
+/* MENGHAPUS LAYOUT GRID 2 KOLOM (KARENA FOTO DIHAPUS) */
+/* KONTEN BIO TEXT SEKARANG MENGISI LEBAR PENUH */
 .about-me-layout {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 40px;
-    align-items: start; 
+    display: block; /* Ganti dari grid ke block */
     margin-top: 40px; 
 }
 
-/* FOTO PROFIL DI HALAMAN ABOUT */
+/* HAPUS FOTO GRID (agar tidak ada ruang kosong di kiri) */
 .profile-photo-large {
-    width: 100%; 
-    max-width: 300px; 
-    height: auto;
-    border-radius: 8px;
-    object-fit: contain; 
-    border: 4px solid var(--accent-light);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+.profile-summary {
+    display: none;
 }
 
 .bio-text {
@@ -235,10 +212,10 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--accent-light); /* KOREKSI: Tambahkan border untuk kotak timbul di social card */
+    border: 1px solid var(--accent-light); 
 }
 .social-card i {
-    color: var(--interactive-start); /* KOREKSI: Ikon langsung ungu/biru */
+    color: var(--interactive-start); 
     transition: color 0.3s ease;
     margin-bottom: 5px; 
 }
@@ -250,6 +227,16 @@ a {
     color: var(--accent-medium);
     font-size: 0.95em;
     margin-top: 5px;
+}
+
+/* --- GALLERY VISUALS --- */
+.gallery-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; 
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 /* --- PROJECTS LAYOUT (Grid Cards) --- */
@@ -308,23 +295,43 @@ a {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* --- GALLERY VISUALS --- */
-.gallery-image {
-    width: 100%;
-    height: 150px;
-    object-fit: cover; /* KOREKSI: Gunakan cover lagi untuk gallery images (bukan doc) */
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* KOREKSI: Tambahkan bayangan untuk efek timbul */
+/* --- DETAIL PROJECT LAYOUT (torto.html) --- */
+.detail-section {
+    margin-top: 40px;
+    padding-top: 40px; 
+    border-top: 2px solid var(--accent-light); 
 }
-
-/* --- DETAIL PROJECT LAYOUT --- */
 .doc-image {
     width: 100%;
     height: 250px;
-    object-fit: contain; /* FIX: Pastikan ini adalah contain untuk dokumentasi */
+    object-fit: contain; 
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ... (Sisa kode detail dan mobile responsiveness) ... */
+
+/* ========================================= */
+/* MOBILE RESPONSIVENESS */
+/* ========================================= */
+@media (max-width: 992px) {
+    /* Umum */
+    .content-section {
+        padding: 30px;
+    }
+
+    /* ABOUT ME */
+    .about-me-layout {
+        display: block; /* Pastikan ini block di mobile */
+    }
+    .about-header-text {
+        padding: 0 30px; 
+    }
+    .social-links-grid {
+        grid-template-columns: 1fr; /* Tumpuk card sosial di mobile */
+    }
+
+    /* PROJECTS & DOC */
+    .project-list-grid, .doc-grid {
+        grid-template-columns: 1fr;
+    }
+}
