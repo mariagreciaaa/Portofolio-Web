@@ -73,6 +73,17 @@ a {
     margin-bottom: 50px;
 }
 
+/* FOTO PROFIL DI INDEX */
+.hub-header img {
+    width: 250px; 
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%; 
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    border: 5px solid var(--color-white);
+}
+
 /* Grid Kartu Navigasi */
 .hub-nav-grid {
     display: grid;
@@ -143,6 +154,7 @@ a {
     font-weight: 600;
 }
 
+/* --- ABOUT ME LAYOUT --- */
 /* FOTO PROFIL DI HALAMAN ABOUT */
 .profile-photo-about-main {
     width: 200px; 
@@ -153,6 +165,11 @@ a {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border: 3px solid var(--accent-light);
     display: block; 
+}
+.bio-text {
+    padding-top: 0;
+    max-width: 800px; 
+    margin: 0 auto; 
 }
 
 /* --- PROJECTS LAYOUT (Grid Cards) --- */
@@ -191,24 +208,26 @@ a {
     border-radius: 15px; 
     background-color: rgba(123, 102, 255, 0.1); 
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
-    overflow: hidden; /* Penting: Memastikan gambar yang melebihi batas terpotong */
+    overflow: hidden; 
 }
 .project-logo {
     max-width: 90% !important; /* KUATKAN: Maksa logo hanya 90% dari container */
     max-height: 90% !important;
-    width: auto !important;
+    width: auto !important; /* Agar gambar fleksibel di dalam batasan */
     height: auto !important;
-    object-fit: contain; /* Memastikan gambar full terlihat di dalam container 100x100 */
+    object-fit: contain; /* Memastikan gambar full terlihat di dalam container */
     transition: transform 0.3s ease;
 }
 
-/* MOBILE RESPONSIVENESS */
-@media (max-width: 768px) {
-    .content-section {
-        padding: 20px;
-    }
-    .project-list-grid {
-        grid-template-columns: 1fr;
-    }
+/* STYLE KOTAK UNTUK KEMBALI KE DASHBOARD */
+.back-to-hub-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-dark);
+    color: var(--color-white);
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 /* ... (sisa kode lainnya) ... */
