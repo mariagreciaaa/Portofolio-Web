@@ -73,6 +73,18 @@ a {
     margin-bottom: 50px;
 }
 
+/* FOTO PROFIL DI INDEX (Final Fix: Bulat & di Tengah) */
+.hub-header img.hub-profile-pic { /* Target class spesifik untuk dashboard */
+    width: 200px !important; 
+    height: 200px !important;
+    object-fit: cover !important; 
+    border-radius: 50% !important; /* Membuatnya bulat */
+    margin: 0 auto 30px auto !important; /* Di tengah dan ada jarak */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    border: 5px solid var(--color-white); 
+    display: block !important; /* Memastikan img sebagai block element untuk margin auto */
+}
+
 /* Grid Kartu Navigasi */
 .hub-nav-grid {
     display: grid;
@@ -239,7 +251,7 @@ a {
     text-align: center; 
     max-width: 700px;
     margin: 0 auto;
-    margin-bottom: 20px; /* KOREKSI: Tambah jarak di bawah deskripsi */
+    margin-bottom: 20px; 
 }
 
 /* FIX: LOGO DETAIL (Torto) */
@@ -255,7 +267,7 @@ a {
 
 
 .detail-section {
-    margin-top: 40px; /* KOREKSI: Jarak antar section yang jelas */
+    margin-top: 40px; 
     padding-top: 40px; 
     margin-bottom: 40px; 
     border-top: 2px solid var(--accent-light); 
@@ -297,7 +309,7 @@ a {
 .doc-image {
     width: 100%;
     height: 250px;
-    object-fit: contain; /* FIX: Gambar full terlihat tanpa cropping */
+    object-fit: contain; 
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
