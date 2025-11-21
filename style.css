@@ -172,15 +172,13 @@ a {
 .profile-photo-about-main {
     width: 200px; 
     height: 200px;
-    object-fit: cover; /* Gunakan 'cover' agar gambar mengisi area, dan pastikan ini foto yang cocok untuk bulat */
-    border-radius: 50%; /* Bulat */
+    object-fit: cover; 
+    border-radius: 50%; /* BULAT */
     margin: 20px auto 30px auto; 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
     border: 5px solid var(--accent-light);
     display: block; 
 }
-/* Jika ingin kotak, ganti 'border-radius: 50%;' menjadi 'border-radius: 8px;' dan 'object-fit: contain;' */
-
 
 .profile-summary {
     display: block; 
@@ -188,6 +186,10 @@ a {
 
 .bio-text {
     padding-top: 0;
+    text-align: center; /* KOREKSI: PUSATKAN TEKS PARAGRAF */
+    max-width: 800px; /* KOREKSI: Batasi lebar agar tidak terlalu melebar di desktop */
+    margin-left: auto;
+    margin-right: auto;
 }
 .bio-text h3 {
     margin-top: 0; 
@@ -196,7 +198,12 @@ a {
     margin-bottom: 15px;
     border-bottom: 2px solid var(--accent-light);
     padding-bottom: 5px;
+    display: inline-block; /* KOREKSI: agar border-bottom hanya selebar teks */
 }
+.bio-text p {
+    margin-bottom: 1em; /* Tambahkan jarak antar paragraf */
+}
+
 
 /* --- SOCIAL HUB STYLES --- */
 .social-links-grid {
@@ -231,13 +238,23 @@ a {
     color: var(--interactive-start); 
 }
 
+/* KOREKSI: Merapikan section Galeri */
+.gallery-cta {
+    text-align: center;
+    margin-top: 40px; /* Jarak dari social cards */
+    margin-bottom: 30px; /* KOREKSI: Jarak dari photo grid */
+}
+.gallery-cta p {
+    margin-top: 10px; /* Jarak antara teks dan tombol */
+}
+
 
 /* --- GALLERY VISUALS --- */
 .photo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 15px;
-    margin-top: 30px;
+    margin-top: 0; /* KOREKSI: sudah diatur oleh gallery-cta */
 }
 .gallery-image {
     width: 100%;
@@ -279,7 +296,7 @@ a {
     .content-section {
         padding: 20px;
     }
-    .social-links-grid, .photo-grid, .doc-grid {
+    .social-links-grid, .photo-grid { /* KOREKSI: doc-grid mungkin tidak relevan di about.html */
         grid-template-columns: 1fr;
     }
 }
