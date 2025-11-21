@@ -168,17 +168,13 @@ a {
 }
 
 /* MENGHAPUS LAYOUT GRID 2 KOLOM (KARENA FOTO DIHAPUS) */
-/* KONTEN BIO TEXT SEKARANG MENGISI LEBAR PENUH */
 .about-me-layout {
-    display: block; /* Ganti dari grid ke block */
+    display: block; 
     margin-top: 40px; 
 }
 
-/* HAPUS FOTO GRID (agar tidak ada ruang kosong di kiri) */
-.profile-photo-large {
-    display: none;
-}
-.profile-summary {
+/* FOTO PROFIL DI HALAMAN ABOUT (DIHAPUS) */
+.profile-photo-large, .profile-summary {
     display: none;
 }
 
@@ -230,6 +226,12 @@ a {
 }
 
 /* --- GALLERY VISUALS --- */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
 .gallery-image {
     width: 100%;
     height: 150px;
@@ -276,12 +278,6 @@ a {
     background-color: rgba(123, 102, 255, 0.1); 
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
 }
-.project-logo {
-    max-width: 60%; 
-    max-height: 60%;
-    object-fit: contain; 
-    transition: transform 0.3s ease;
-}
 
 /* STYLE KOTAK UNTUK KEMBALI KE DASHBOARD */
 .back-to-hub-button {
@@ -309,7 +305,6 @@ a {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
 /* ========================================= */
 /* MOBILE RESPONSIVENESS */
 /* ========================================= */
@@ -321,13 +316,13 @@ a {
 
     /* ABOUT ME */
     .about-me-layout {
-        display: block; /* Pastikan ini block di mobile */
+        display: block; 
     }
     .about-header-text {
         padding: 0 30px; 
     }
     .social-links-grid {
-        grid-template-columns: 1fr; /* Tumpuk card sosial di mobile */
+        grid-template-columns: 1fr;
     }
 
     /* PROJECTS & DOC */
