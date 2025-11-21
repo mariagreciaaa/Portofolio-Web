@@ -155,11 +155,10 @@ a {
 }
 
 /* --- ABOUT ME LAYOUT --- */
-/* Wrapper untuk teks judul dan foto profil */
 .intro-section {
-    display: flex; /* KOREKSI: Menggunakan Flexbox untuk center */
+    display: flex; 
     flex-direction: column; 
-    align-items: center; /* PUSATKAN horizontal */
+    align-items: center; 
     text-align: center; 
     margin-bottom: 40px;
 }
@@ -169,23 +168,34 @@ a {
     max-width: none; 
 }
 
-/* FOTO PROFIL DI HALAMAN ABOUT */
-.profile-photo-large {
+/* FOTO PROFIL KHUSUS UNTUK ABOUT.HTML (gambar 'hai.png') */
+.profile-photo-about-main {
     width: 200px; 
     height: 200px;
-    object-fit: contain; 
-    border-radius: 8px; 
+    object-fit: cover; /* Gunakan 'cover' agar gambar mengisi area, dan pastikan ini foto yang cocok untuk bulat */
+    border-radius: 50%; /* Bulat */
     margin: 20px auto 30px auto; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border: 3px solid var(--accent-light);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    border: 5px solid var(--accent-light);
     display: block; 
 }
+/* Jika ingin kotak, ganti 'border-radius: 50%;' menjadi 'border-radius: 8px;' dan 'object-fit: contain;' */
+
+
 .profile-summary {
     display: block; 
 }
 
 .bio-text {
     padding-top: 0;
+}
+.bio-text h3 {
+    margin-top: 0; 
+    color: var(--accent-dark);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--accent-light);
+    padding-bottom: 5px;
 }
 
 /* --- SOCIAL HUB STYLES --- */
@@ -215,12 +225,29 @@ a {
 .social-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(76, 0, 255, 0.2);
-    border-color: var(--interactive-start); /* Garis border berubah warna saat hover */
+    border-color: var(--interactive-start); 
 }
 .social-card:hover h3 {
-    color: var(--interactive-start); /* Mengembalikan efek warna pada judul saat hover */
+    color: var(--interactive-start); 
 }
 
+
+/* --- GALLERY VISUALS --- */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 15px;
+    margin-top: 30px;
+}
+.gallery-image {
+    width: 100%;
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    aspect-ratio: 4 / 2; /* Rasio aspek untuk gambar galeri */
+}
 
 /* --- PROJECTS LAYOUT (Grid Cards) --- */
 .project-list-grid {
@@ -229,21 +256,6 @@ a {
     gap: 30px;
     margin-top: 40px;
     text-align: left;
-}
-.project-card-large {
-    background-color: var(--color-white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    border: 1px solid var(--accent-light);
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
-    text-decoration: none;
-    color: var(--text-dark);
-    height: 100%; 
 }
 
 /* LOGO ICON/GAMBAR */
@@ -259,8 +271,11 @@ a {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
 }
 
+/* ========================================= */
 /* MOBILE RESPONSIVENESS */
+/* ========================================= */
 @media (max-width: 768px) {
+    /* Umum */
     .content-section {
         padding: 20px;
     }
