@@ -165,23 +165,34 @@ a {
 }
 
 /* --- ABOUT ME LAYOUT --- */
-/* Style untuk judul di luar Grid */
+/* Wrapper untuk teks judul dan foto profil */
+.intro-section {
+    text-align: center; /* Pusatkan semua konten di dalamnya */
+    margin-bottom: 40px;
+}
+
 .about-header-text {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 60px; 
+    /* Hapus padding karena sudah diatur oleh intro-section */
+    padding: 0; 
+    max-width: none; /* Biarkan dia mengikuti lebar parent */
 }
 
-/* Layout Biografi Penuh (1 kolom) */
-.about-me-layout {
-    display: block; 
-    margin-top: 40px; 
+/* FOTO PROFIL DI HALAMAN ABOUT */
+.profile-photo-large {
+    width: 200px; /* Ukuran foto yang lebih masuk akal */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Bulat */
+    margin: 20px auto 30px auto; /* Margin atas dan bawah, auto untuk pusat horizontal */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--accent-light);
+    display: block; /* Pastikan gambar menjadi blok agar margin auto berfungsi */
+}
+/* Style untuk div summary (jika perlu) */
+.profile-summary {
+    display: block; /* Pastikan div ini juga terlihat */
 }
 
-/* FOTO PROFIL DI HALAMAN ABOUT (DIHAPUS DARI KODE) */
-.profile-photo-large, .profile-summary {
-    display: none;
-}
 
 .bio-text {
     padding-top: 0;
@@ -224,20 +235,18 @@ a {
 /* --- GALLERY VISUALS --- */
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Agar lebih responsif */
     gap: 15px;
     margin-top: 30px;
 }
 .gallery-image {
     width: 100%;
-    /* KOREKSI: Hapus height agar gambar tidak terpotong panjang. */
     height: auto; 
     object-fit: cover; 
     border-radius: 8px;
     transition: transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    /* Tambahkan rasio aspek untuk stabilitas visual jika perlu */
-    aspect-ratio: 4 / 1.5; 
+    aspect-ratio: 4 / 2; /* Rasio aspek yang lebih persegi panjang */
 }
 
 /* --- PROJECTS LAYOUT (Grid Cards) --- */
@@ -304,29 +313,26 @@ a {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
 /* ========================================= */
 /* MOBILE RESPONSIVENESS */
 /* ========================================= */
-@media (max-width: 992px) {
-    /* Umum */
+@media (max-width: 768px) { /* Adjust breakpoint for smaller screens */
     .content-section {
-        padding: 30px;
+        padding: 20px;
     }
-
-    /* ABOUT ME */
-    .about-me-layout {
-        display: block; 
+    .section-title-large {
+        font-size: 2em;
+    }
+    .section-subtitle-large {
+        font-size: 1em;
+    }
+    .social-links-grid, .photo-grid {
+        grid-template-columns: 1fr; /* Tumpuk di layar kecil */
     }
     .about-header-text {
-        padding: 0 30px; 
+        padding: 0;
     }
-    .social-links-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* PROJECTS & DOC */
-    .project-list-grid, .doc-grid {
-        grid-template-columns: 1fr;
+    .gallery-image {
+        aspect-ratio: 16 / 9; /* Rasio lebih lebar untuk mobile */
     }
 }

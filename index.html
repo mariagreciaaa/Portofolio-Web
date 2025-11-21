@@ -3,71 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARIA GRECIA HUTABARAT | Creative Marketing Dashboard</title>
+    <title>About Me | MARIA GRECIA HUTABARAT</title>
     
     <link rel="stylesheet" href="style.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     
-    <div class="main-dashboard-hub">
+    <div class="page-container">
         
-        <header class="hub-header">
-            <img src="images/pas foto.jpg" alt="Maria Grecia Hutabarat" class="hub-profile-pic"> 
-            <h1 class="hub-title">Welcome To</h1>
-            <h1 class="hub-title">MARIA GRECIA HUTABARAT</h1>
-            <h2 class="hub-subtitle">Creative Portfolio 2025</h2>
-            <p class="hub-tagline">
-                Content Creation | Social Media Management | Data-Driven Marketing
-            </p>
+        <header class="page-header">
+            <nav class="nav-minimal">
+                <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Kembali ke Dashboard</a>
+            </nav>
         </header>
 
-        <section class="hub-nav-grid">
+        <section id="about-content" class="content-section">
+            <div class="intro-section"> <div class="about-header-text">
+                    <h1 class="section-title-large">HI, I'M GRECIA!</h1>
+                    <h2 class="section-subtitle-large">Creative Strategist & Digital Marketer</h2>
+                </div>
+                
+                <div class="profile-summary">
+                    <img src="images/hai.png" alt="Maria Grecia" class="profile-photo-large">
+                </div>
+            </div>
             
-            <a href="about.html" class="nav-card">
-                <i class="fas fa-user nav-icon"></i>
-                <h3>About Me</h3>
-                <p>A professional overview of my background, values, and data-driven approach to digital marketing.</p>
-            </a>
-
-            <a href="projects.html" class="nav-card">
-                <i class="fas fa-chart-line nav-icon"></i>
-                <h3>Study Projects</h3>
-                <p>Performance insights and measurable results from the digital projects I’ve executed.</p>
-            </a>
-
-            <a href="experiences.html" class="nav-card">
-                <i class="fas fa-bullhorn nav-icon"></i>
-                <h3>Experiences</h3>
-                <p>A portfolio of event leadership and public speaking that reflects my communication expertise.</p>
-            </a>
-            
-            <a href="design.html" class="nav-card">
-                <i class="fas fa-palette nav-icon"></i>
-                <h3>Visual Design Portfolio</h3>
-                <p>A collection of visual designs and creative assets that support digital marketing strategies.</p>
-            </a>
-            
-            <a href="organization.html" class="nav-card">
-                <i class="fas fa-building nav-icon"></i>
-                <h3>Organization & Achievements</h3>
-                <p>Organizational contributions and achievements showcasing my leadership and teamwork capabilities.</p>
-            </a>
-
-            <a href="contact.html" class="nav-card">
-                <i class="fas fa-envelope nav-icon"></i>
-                <h3>Contact Me</h3>
-                <p>Connect with me for professional opportunities, collaborations, or further discussions.</p>
-            </a>
-
+            <div class="bio-text" style="margin-top: 30px;">
+                <h3>My Story & Philosophy</h3> 
+                <p>I am a fifth-semester student of Digital Commerce and Supply Chain at Multimedia Nusantara Polytechnic, with a strong interest in digital marketing, communication, and creative content. Through various campus projects, digital publication experiences, and organizational roles, I have developed the ability to create and manage cross-platform content (Instagram, TikTok, Facebook, LinkedIn) and analyze performance using data-driven insights.</p>
+                <p>I believe marketing is more than selling a product, it is about understanding the audience, building meaningful connections, and telling authentic stories. Values such as collaboration, initiative, and sincerity guide the way I work and shape every campaign and project I contribute to.</p>
+            </div> 
         </section>
         
+        <section id="social-hub" class="content-section bg-secondary">
+            <h2 class="section-title">Social Hub & Visuals</h2>
+            <p class="section-subtitle">GET IN TOUCH!!</p>
+
+            <div class="social-links-grid">
+                
+                <a href="https://www.linkedin.com/in/mariagrecia?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-card linkedin">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Profile Profesional, Jaringan, dan Karir</p>
+                </a>
+                
+                <a href="https://www.instagram.com/greciahutabaratt?igsh=MW45a3ZjNTBnbTQ1bA==" target="_blank" class="social-card instagram">
+                    <i class="fab fa-instagram fa-2x"></i>
+                    <h3>Instagram</h3>
+                    <p>Konten Harian & Aktivitas Kreatif</p>
+                </a>
+                
+                <a href="mailto:mgreciahutabarat@gmail.com" class="social-card gmail">
+                    <i class="fas fa-envelope fa-2x"></i>
+                    <h3>Email</h3>
+                    <p>Untuk Kebutuhan Profesional/Kolaborasi</p>
+                </a>
+                
+            </div>
+            
+            <div class="gallery-cta">
+                <a href="#photo-gallery" class="cta-button"><i class="fas fa-camera"></i> My Gallery</a>
+                <p class="gallery-note">Explore more visuals in my gallery.</p>
+            </div>
+
+            <div id="photo-gallery" class="photo-grid">
+                <img src="images/organisasi/gramedia.jpg" alt="Photo 1" class="gallery-image">
+                <img src="images/organisasi/fs1.jpg" alt="Photo 2" class="gallery-image">
+                <img src="images/organisasi/fs 2.jpg" alt="Photo 3" class="gallery-image">
+                <img src="images/organisasi/anagata.jpg" alt="Photo 4" class="gallery-image">
+            </div>
+            
+        </section>
+
+        <div class="full-report-link" style="text-align: center; margin-top: 40px;">
+              <a href="index.html" class="back-to-hub-button">← Kembali ke Dashboard Utama</a>
+        </div>
+        
         <footer class="main-footer">
-            &copy; 2025 MARIA GRECIA HUTABARAT
+            &copy; 2025 MARIA GRECIA HUTABARAT. All Rights Reserved.
         </footer>
+        
     </div>
 </body>
 </html>
