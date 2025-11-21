@@ -73,7 +73,7 @@ a {
     margin-bottom: 50px;
 }
 
-/* FOTO PROFIL DI INDEX */
+/* FOTO PROFIL DI INDEX (FIXED AND BULAT) */
 .hub-header img.hub-profile-pic { 
     width: 200px !important; 
     height: 200px !important;
@@ -166,15 +166,19 @@ a {
 
 /* FOTO PROFIL DI HALAMAN ABOUT */
 .profile-photo-about-main {
-    /* STYLE INI HANYA AKAN ADA DI ABOUT.HTML MELALUI STYLE TAG DI HTML */
-    display: none; 
+    width: 200px !important; 
+    height: 200px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important; 
+    margin: 20px auto 30px auto !important; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--accent-light);
+    display: block !important; 
 }
-
 .bio-text {
     padding-top: 0;
     max-width: 800px; 
     margin: 0 auto; 
-    text-align: center; /* PUSATKAN TEKS */
 }
 .bio-text h3 {
     margin-top: 0; 
@@ -223,28 +227,13 @@ a {
     color: var(--interactive-start) !important; 
 }
 
-/* KOREKSI: SPASI GALERI VISUALS */
-.gallery-cta {
-    text-align: center;
-    margin-top: 40px; 
-    margin-bottom: 20px; 
-}
-.gallery-cta p {
-    margin-top: 5px; 
-}
-
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 15px;
-    margin-top: 0; 
-    margin-bottom: 50px; 
-}
+/* --- GALLERY VISUALS --- */
 .gallery-image {
     width: 100%;
     height: auto; 
     object-fit: cover; 
     border-radius: 8px;
+    transition: transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     aspect-ratio: 4 / 2;
 }
@@ -256,6 +245,22 @@ a {
     gap: 30px;
     margin-top: 40px;
     text-align: left;
+}
+
+.project-card-large {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid var(--accent-light);
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    text-decoration: none;
+    color: var(--text-dark);
+    height: 100%; 
 }
 
 /* LOGO ICON/GAMBAR (Proyek Card) */
@@ -303,6 +308,8 @@ a {
     border: 1px solid var(--accent-light); 
     border-radius: 8px;
 }
+
+
 .detail-section {
     margin-top: 40px; 
     padding-top: 40px; 
@@ -310,12 +317,52 @@ a {
     border-top: 2px solid var(--accent-light); 
 }
 
+.tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.key-results {
+    list-style: none; 
+    padding-left: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.key-results li {
+    padding: 8px 0; 
+    font-size: 1.05em;
+    border-bottom: 1px dotted var(--accent-light); 
+}
+
+.doc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.doc-image {
+    width: 100%;
+    height: 250px;
+    object-fit: contain; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ========================================= */
 /* MOBILE RESPONSIVENESS */
+/* ========================================= */
 @media (max-width: 768px) {
     .content-section {
         padding: 20px;
     }
-    .social-links-grid, .photo-grid, .doc-grid {
+    .social-links-grid {
+        grid-template-columns: 1fr;
+    }
+    .doc-grid {
         grid-template-columns: 1fr;
     }
 }
