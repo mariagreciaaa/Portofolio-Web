@@ -173,19 +173,27 @@ a {
 
 /* FOTO PROFIL DI HALAMAN ABOUT */
 .profile-photo-large {
-    width: 200px; 
-    height: 200px;
-    object-fit: cover;
+    /* KUATKAN UKURAN FOTO PROFIL */
+    width: 200px !important; 
+    height: 200px !important;
+    max-width: 200px !important; 
+    
+    /* Gunakan cover jika ingin bulat, tapi pastikan aspect ratio 1:1 */
+    object-fit: cover !important; 
     border-radius: 50%; 
-    margin: 20px auto 30px auto; 
+    
+    margin: 20px 0 30px 0; /* Margin atas-bawah dan margin kiri/kanan dihilangkan karena sudah di-center oleh Flexbox */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border: 3px solid var(--accent-light);
     display: block; 
 }
 .profile-summary {
-    display: block; 
+    /* Wajib: Menggunakan Flexbox untuk centering */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; /* Pastikan mengisi lebar container */
 }
-
 .bio-text {
     padding-top: 0;
 }
