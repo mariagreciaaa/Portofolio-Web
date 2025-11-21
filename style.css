@@ -165,7 +165,7 @@ a {
 }
 
 /* --- ABOUT ME LAYOUT --- */
-/* Wrapper untuk teks judul dan foto profil (Membuatnya ke tengah) */
+/* Style untuk judul di luar Grid */
 .intro-section {
     text-align: center; 
     margin-bottom: 40px;
@@ -175,21 +175,25 @@ a {
     padding: 0; 
     max-width: none; 
 }
+.about-header-text {
+    padding: 0; 
+    max-width: none; 
+}
 
 /* FOTO PROFIL DI HALAMAN ABOUT */
 .profile-photo-large {
-    width: 200px; 
+    width: 200px; /* Ukuran foto yang lebih masuk akal */
     height: 200px;
-    object-fit: cover;
-    border-radius: 50%; /* Membuat kotak menjadi bulat */
-    margin: 20px auto 30px auto; 
+    object-fit: cover; /* Gunakan cover untuk mengisi ruang dan menjadikannya bulat */
+    border-radius: 50%; 
+    margin: 20px auto 30px auto; /* Margin untuk memusatkan foto */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border: 3px solid var(--accent-light);
-    display: block; 
+    display: block; /* Wajib: Agar margin auto berfungsi */
 }
 /* Style untuk div summary */
 .profile-summary {
-    display: block; 
+    display: block; /* Wajib: Agar div induk foto terlihat */
 }
 
 
