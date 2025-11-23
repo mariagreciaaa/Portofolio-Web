@@ -1273,3 +1273,74 @@ a {
         padding: 15px;
     }
 }
+/* DALAM FILE style.css (Tambahkan di bagian paling bawah) */
+
+/* ========================================= */
+/* CSS KHUSUS HALAMAN CONTACT.HTML */
+/* ========================================= */
+
+.contact-center-layout {
+    text-align: center; 
+}
+
+/* GRID TAUTAN KONTAK */
+.contact-links-grid-detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom di desktop */
+    gap: 30px;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+/* STYLE KARTU KONTAK INTERAKTIF */
+.contact-card-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    background-color: var(--color-white);
+    padding: 30px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--accent-light);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    min-height: 180px;
+    
+    transition: all 0.3s ease;
+}
+
+.contact-card-detail:hover {
+    transform: translateY(-5px); /* Efek pop-up */
+    box-shadow: 0 10px 25px rgba(0, 74, 127, 0.2);
+}
+
+.contact-icon-detail {
+    margin-bottom: 15px;
+    color: var(--accent-dark);
+    transition: color 0.3s ease;
+}
+
+.contact-card-detail:hover .contact-icon-detail {
+    color: var(--interactive-start);
+}
+
+.contact-card-detail h3 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    color: var(--accent-dark);
+}
+
+.contact-action {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--interactive-start);
+}
+
+@media (max-width: 768px) {
+    .contact-links-grid-detail {
+        grid-template-columns: 1fr; /* 1 kolom di mobile */
+    }
+}
