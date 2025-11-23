@@ -622,3 +622,37 @@ a {
         grid-template-columns: 1fr; /* 1 kolom di mobile */
     }
 }
+
+/* DALAM FILE style.css (Tambahkan di bagian paling bawah) */
+
+/* ========================================= */
+/* CSS KHUSUS ORGANIZATION HUB (body.html) */
+/* ========================================= */
+
+/* Mengaktifkan Grid 2 kolom dan mengatur jarak untuk kartu */
+#org-ach-hub .hub-nav-grid {
+    display: grid !important; 
+    grid-template-columns: 1fr 1fr !important; /* FIX: Memaksa 2 kolom di desktop */
+    gap: 30px !important;
+    max-width: 700px;
+    margin: 0 auto; /* Memusatkan grid */
+}
+
+/* Mengatur Style dan Alignment Kartu */
+#org-ach-hub .nav-card {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 40px 20px !important; /* Tambah padding agar terlihat besar dan rapi */
+    
+    /* Memastikan efek hover/box shadow berfungsi */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* MOBILE FIX: Memastikan kartu menjadi 1 kolom di perangkat kecil */
+@media (max-width: 768px) {
+    #org-ach-hub .hub-nav-grid {
+        grid-template-columns: 1fr !important; 
+    }
+}
