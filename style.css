@@ -702,3 +702,21 @@ a {
         grid-template-columns: 1fr !important; 
     }
 }
+
+/* DALAM FILE style.css (Tambahkan di bagian paling bawah) */
+
+/* ========================================= */
+/* CSS KHUSUS ORGANIZATION (Visuals) */
+/* ========================================= */
+
+.org-visual-small {
+    /* Style untuk foto di dalam timeline */
+    max-width: 100%;
+    width: 200px; /* Batasan lebar agar foto tidak terlalu besar */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Sudut membulat */
+    margin-top: 15px; /* Jarak dari teks di atasnya */
+    border: 1px solid var(--accent-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
