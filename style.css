@@ -468,3 +468,45 @@ a {
         grid-template-columns: 1fr; /* 1 kolom di mobile */
     }
 }
+
+/* ========================================= */
+/* CSS KHUSUS HALAMAN EXPERIENCES.HTML (Galeri Foto) */
+/* ========================================= */
+
+.content-section-gallery {
+    /* Mirip content-section, tapi untuk bagian galeri di dalam halaman */
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 60px;
+}
+
+.photo-grid-exp {
+    display: grid;
+    /* 3 kolom responsif */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.exp-gallery-image {
+    width: 100%;
+    /* Gunakan aspect-ratio untuk tinggi yang seragam dan proporsional */
+    aspect-ratio: 4 / 3; 
+    object-fit: cover;
+    border-radius: 8px;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.exp-gallery-image:hover {
+    transform: scale(1.05); /* Efek zoom/timbul */
+    box-shadow: 0 8px 15px rgba(76, 0, 255, 0.3);
+}
+
+/* MOBILE FIX UNTUK GALERI EXPERIENCES */
+@media (max-width: 768px) {
+    .photo-grid-exp {
+        grid-template-columns: 1fr; /* 1 kolom di mobile */
+    }
+}
