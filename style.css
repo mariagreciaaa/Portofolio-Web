@@ -671,3 +671,34 @@ a {
         grid-template-columns: 1fr !important; 
     }
 }
+/* DALAM FILE style.css (Tambahkan di bagian paling bawah) */
+
+/* KOREKSI ABSOLUT UNTUK ORGANIZATION HUB (body.html) */
+
+/* Memaksa elemen Grid untuk aktif dan merapikan kartu */
+.hub-nav-grid {
+    display: grid !important; 
+    grid-template-columns: 1fr 1fr !important; /* FIX: Memaksa 2 kolom di desktop */
+    gap: 30px !important;
+    max-width: 700px !important;
+    margin: 40px auto !important; 
+    list-style: none !important; /* Hapus bullet points */
+    padding-left: 0 !important;
+}
+
+/* Mengatur Alignment Kartu */
+.hub-nav-grid .nav-card {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 40px 20px !important; /* Tambah padding agar terlihat besar dan rapi */
+    min-height: 150px !important;
+}
+
+/* MOBILE FIX: Memastikan kartu menjadi 1 kolom di perangkat kecil */
+@media (max-width: 768px) {
+    .hub-nav-grid {
+        grid-template-columns: 1fr !important; 
+    }
+}
