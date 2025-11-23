@@ -254,15 +254,18 @@ a {
     aspect-ratio: 4 / 2;
 }
 
-/* --- PROJECTS LAYOUT (Grid Cards) --- */
+/* DALAM FILE style.css (Di bagian PROJECTS LAYOUT (Grid Cards)) */
 .project-list-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    /* FIX: MEMAKSA GRID 3 KOLOM MUTLAK PADA UKURAN DESKTOP */
+    grid-template-columns: repeat(3, 1fr) !important; /* Ganti kode yang lama */
     gap: 30px;
     margin-top: 40px;
     text-align: left;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
 .project-card-large {
     background-color: var(--color-white);
     padding: 30px;
@@ -396,18 +399,30 @@ a {
 }
 
 
+/* DALAM FILE style.css (Bagian MOBILE RESPONSIVENESS) */
+
 /* ========================================= */
-/* MOBILE RESPONSIVENESS */
+/* MOBILE RESPONSIVENESS (FINAL FIX) */
 /* ========================================= */
 @media (max-width: 768px) {
+    /* Style umum untuk section content */
     .content-section {
-        padding: 20px;
+        padding: 20px; /* FIX: Titik koma sudah ada di sini */
     }
+
+    /* FIX: Memaksa PROJECTS MENJADI 1 KOLOM DI MOBILE */
+    .project-list-grid {
+        grid-template-columns: 1fr !important; /* Fix: Tidak perlu 1fr important */
+        max-width: 100%;
+        margin: 20px auto;
+        /* Hapus margin-left/right jika ada */
+    }
+
+    /* FIX: Social Hub dan Doc Grid */
     .social-links-grid, .doc-grid {
         grid-template-columns: 1fr;
     }
 }
-
 /* ========================================= */
 /* CSS KHUSUS HALAMAN EXPERIENCES.HTML (Grid Cards) */
 /* ========================================= */
