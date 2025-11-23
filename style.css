@@ -604,3 +604,21 @@ a {
         grid-template-columns: 1fr; /* 1 kolom di mobile */
     }
 }
+/* DALAM FILE style.css (Tambahkan di bagian paling bawah) */
+
+/* ========================================= */
+/* CSS KHUSUS ORGANIZATION HUB (body.html) */
+/* ========================================= */
+
+#org-ach-grid {
+    display: grid;
+    /* FIX: MEMAKSA 2 KOLOM UNTUK HUB ORGANISASI (1fr 1fr) */
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    #org-ach-grid {
+        grid-template-columns: 1fr; /* 1 kolom di mobile */
+    }
+}
