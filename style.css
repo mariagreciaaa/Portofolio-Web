@@ -590,3 +590,17 @@ a {
         padding-left: 40px; 
     }
 }
+/* DALAM FILE style.css (Tambahkan di bagian bawah) */
+
+/* KOREKSI: STYLE KHUSUS HUB ORGANISASI (2 kolom) */
+#org-ach-hub .hub-nav-grid {
+    grid-template-columns: 1fr 1fr; /* Memaksa 2 kolom di desktop */
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    #org-ach-hub .hub-nav-grid {
+        grid-template-columns: 1fr; /* 1 kolom di mobile */
+    }
+}
