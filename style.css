@@ -510,3 +510,83 @@ a {
         grid-template-columns: 1fr; /* 1 kolom di mobile */
     }
 }
+
+/* ========================================= */
+/* CSS KHUSUS HALAMAN ORGANIZATION.HTML (Timeline) */
+/* ========================================= */
+
+.timeline-wrapper {
+    max-width: 900px;
+    margin: 40px auto;
+    position: relative;
+    padding-left: 20px;
+    border-left: 3px solid var(--accent-light); /* Garis vertikal utama */
+}
+
+.timeline-item-detail {
+    margin-bottom: 40px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: -42px; /* Posisikan ikon di luar garis */
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background-color: var(--interactive-start);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    box-shadow: 0 0 0 5px var(--color-white); /* Efek cincin di sekitar ikon */
+    z-index: 2;
+}
+
+.timeline-content-detail {
+    padding-left: 30px; /* Jarak dari garis vertikal */
+    padding-top: 5px;
+}
+
+.timeline-content-detail h3 {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+    color: var(--accent-dark);
+}
+
+.timeline-date-detail {
+    display: block;
+    font-size: 0.9em;
+    color: var(--accent-medium);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.timeline-content-detail p {
+    font-size: 1em;
+    color: var(--text-dark);
+}
+
+/* MOBILE FIX UNTUK TIMELINE */
+@media (max-width: 768px) {
+    .timeline-wrapper {
+        padding-left: 0;
+        border-left: none;
+    }
+    .timeline-item-detail {
+        padding-left: 0;
+        margin-bottom: 30px;
+        border-left: 3px solid var(--accent-light); 
+    }
+    .timeline-icon {
+        left: -3px; 
+        transform: translateY(-5px);
+    }
+    .timeline-content-detail {
+        padding-left: 40px; 
+    }
+}
