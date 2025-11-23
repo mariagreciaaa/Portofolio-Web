@@ -720,3 +720,101 @@ a {
     border: 1px solid var(--accent-light);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+/* ========================================= */
+/* CSS KHUSUS HALAMAN ORGANIZATION.HTML (Timeline) */
+/* ========================================= */
+
+.timeline-wrapper-grid {
+    max-width: 900px;
+    margin: 40px auto;
+    position: relative;
+    padding-left: 20px;
+    border-left: 3px solid var(--accent-light); /* Garis vertikal utama */
+}
+
+.timeline-card-org {
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-card-org .timeline-icon {
+    position: absolute;
+    left: -18px; /* Posisikan ikon di luar garis */
+    top: 0;
+    width: 35px;
+    height: 35px;
+    background-color: var(--interactive-start);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    box-shadow: 0 0 0 5px var(--color-white); /* Efek cincin di sekitar ikon */
+    z-index: 2;
+}
+
+.timeline-content-detail h3 {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+    color: var(--accent-dark);
+}
+
+.timeline-date-detail {
+    display: block;
+    font-size: 0.9em;
+    color: var(--accent-medium);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.timeline-content-detail p {
+    font-size: 1em;
+    color: var(--text-dark);
+}
+
+/* SECTION VISUAL ORGANISASI */
+.visual-gallery-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 60px;
+}
+
+.photo-grid-org {
+    display: grid;
+    /* 3 kolom responsif */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.org-gallery-image {
+    width: 100%;
+    aspect-ratio: 4 / 3; 
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.org-gallery-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 15px rgba(76, 0, 255, 0.3);
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .timeline-wrapper-grid {
+        padding-left: 0;
+    }
+    .timeline-card-org {
+        padding-left: 40px; 
+    }
+    .timeline-card-org .timeline-icon {
+        left: 0;
+    }
+    .photo-grid-org {
+        grid-template-columns: 1fr; 
+    }
+}
