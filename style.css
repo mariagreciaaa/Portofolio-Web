@@ -347,16 +347,18 @@ a {
 
 /* KOREKSI: TOOLS GRID (Horizontal List) */
 .tools-grid {
-    display: flex !important; /* Wajib: Menggunakan Flexbox untuk baris horizontal */
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 30px;
-    /* KOREKSI: Tambahkan padding agar tags tidak menempel ke tepi */
+    /* MENGHILANGKAN FLEXBOX KARENA BERMASALAH DENGAN LAYOUT */
+    /* display: flex; */ 
+    
     padding-left: 0; 
+    margin-bottom: 30px;
+    /* Memberi jarak agar tags tidak menempel di tepi */
+    margin-right: -10px; 
+    margin-left: -10px;
 }
 .tool-tag {
-    /* Wajib: Mengatur tag sebagai inline-block untuk menjaga baris */
-    display: inline-block; 
+    /* Wajib: Menggunakan Inline Block untuk baris, dan margin agar ada jarak antar item */
+    display: inline-block !important; 
     background-color: var(--primary-bg-start); 
     color: var(--accent-dark);
     padding: 8px 15px;
@@ -364,6 +366,7 @@ a {
     font-size: 0.9em;
     font-weight: 600;
     border: 1px solid var(--accent-light);
+    margin: 5px; /* Jarak antar tag */
 }
 .tool-tag i {
     color: var(--interactive-start);
@@ -402,5 +405,66 @@ a {
     }
     .social-links-grid, .doc-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================= */
+/* CSS KHUSUS HALAMAN EXPERIENCES.HTML (Grid Cards) */
+/* ========================================= */
+.experience-grid-layout {
+    display: grid;
+    /* 2 kolom di desktop untuk tampilan yang lebih mudah dibaca */
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.experience-card {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--accent-light);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    min-height: 250px;
+    
+    transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px); /* Efek timbul pop-up */
+    box-shadow: 0 8px 20px rgba(76, 0, 255, 0.2);
+}
+
+.exp-icon {
+    float: left; /* Ikon berada di kiri */
+    margin-right: 15px;
+    color: var(--interactive-start);
+    font-size: 1.8em;
+}
+
+.experience-card h3 {
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: var(--accent-dark);
+}
+
+.exp-date {
+    display: block;
+    font-size: 0.9em;
+    color: var(--accent-medium);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.experience-card p {
+    font-size: 1em;
+}
+
+/* MOBILE FIX UNTUK TIMELINE */
+@media (max-width: 768px) {
+    .experience-grid-layout {
+        grid-template-columns: 1fr; /* 1 kolom di mobile */
     }
 }
